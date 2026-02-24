@@ -1,0 +1,21 @@
+--- SCHEDULE A CALL ---
+--- CASE STUDIES ---
+File: /Users/sudeepmondal/Desktop/trwebnew/android-application/index.html
+<a class="hover:text-primary transition-colors" href="/portfolio/">Case Studies</a>
+File: /Users/sudeepmondal/Desktop/trwebnew/cloud-solution/index.html
+<a class="hover:text-primary transition-colors" href="/portfolio/">Case Studies</a>
+File: /Users/sudeepmondal/Desktop/trwebnew/about/index.html
+<a class="hover:text-primary transition-colors" href="/portfolio/">Case Studies</a>
+File: /Users/sudeepmondal/Desktop/trwebnew/n8n-automation/index.html
+<a class="hover:text-primary transition-colors" href="/portfolio/">Case Studies</a>
+File: /Users/sudeepmondal/Desktop/trwebnew/blog-details/index.html
+<a class="hover:text-primary transition-colors" href="/portfolio/">Case Studies</a>
+File: /Users/sudeepmondal/Desktop/trwebnew/tech-stack/index.html
+<a class="hover:text-primary transition-colors" href="/portfolio/">Case Studies</a>
+File: /Users/sudeepmondal/Desktop/trwebnew/portfolio/index.html
+<a class="hover:text-primary transition-colors" href="/portfolio/">Case Studies</a>
+File: /Users/sudeepmondal/Desktop/trwebnew/web-development/index.html
+<a class="hover:text-primary transition-colors" href="/portfolio/">Case Studies</a>
+File: /Users/sudeepmondal/Desktop/trwebnew/ios-app-development/index.html
+<a class="hover:text-primary transition-colors" href="/portfolio/">Case Studies</a>
+--- WHATSAPP ---

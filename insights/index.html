@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Insights & Blog | TechnoRapide</title>
+    <meta name="description"
+        content="Stay updated with TechnoRapide's latest insights on technology, development, and digital transformation.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3b82f6",
+                        "background-light": "#f8fafc",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .dark .nav-glass {
+            background: rgba(16, 22, 34, 0.85);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card-animate {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+    </style>
+
+    <style>
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .dark .nav-glass {
+            background: rgba(16, 22, 34, 0.8);
+        }
+
+        .font-gafiya {
+            font-family: 'Gafiya', 'Playfair Display', serif;
+        }
+
+        .font-vartensie {
+            font-family: 'Vartensie', 'Great Vibes', cursive;
+        }
+
+        .font-runiga {
+            font-family: 'Runiga', 'Playfair Display', serif;
+        }
+    </style>
+<style type="text/tailwindcss">
+        @font-face {
+            font-family: 'Runiga';
+            src: local('Runiga');
+        }
+
+        @font-face {
+            font-family: 'Gafiya';
+            src: local('Gafiya');
+        }
+
+        @font-face {
+            font-family: 'Vartensie';
+            src: local('Vartensie');
+        }
+</style>
+</head>
+
+<body class="bg-background-light font-display text-slate-900 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <nav class="sticky top-0 z-50 nav-glass border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <div class="flex flex-col justify-center items-center gap-0">
+                <span class="text-3xl font-gafiya tracking-tight text-slate-900 dark:text-white leading-none">
+                    Techno<span class="text-primary">Rapide</span>
+                </span>
+                <span class="text-[10px] font-bold tracking-[0.15em] text-primary/80 uppercase mt-1">Dream Big, Build
+                    Bigger.</span>
+            </div>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="../">Back to Home</a>
+                <div class="relative">
+                    <button id="whatwedo-toggle" type="button"
+                        class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors">
+                        What We Do?
+                        <span class="material-symbols-outlined text-base">expand_more</span>
+                    </button>
+                    <div id="whatwedo-menu"
+                        class="invisible opacity-0 translate-y-2 pointer-events-none transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full mt-4">
+                        <div
+                            class="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-700 w-[960px] max-w-[95vw] pl-20 pr-8 relative overflow-hidden py-7 flex gap-10">
+                            <div class="absolute left-0 top-0 bottom-0 w-12 bg-slate-50 dark:bg-slate-800/30 flex items-center justify-center border-r border-slate-100 dark:border-slate-700/50">
+                                <span class="transform -rotate-90 whitespace-nowrap text-xs font-bold tracking-[0.3em] text-slate-300 dark:text-slate-600 uppercase">What We Do</span>
+                            </div>
+                            <button id="whatwedo-close" type="button"
+                                class="absolute top-3 right-3 size-8 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500">
+                                <span class="material-symbols-outlined text-lg">close</span>
+                            </button>
+                            <div class="w-1/3 border-r border-slate-200 dark:border-slate-700 pr-4 flex flex-col gap-2">
+                                <button
+                                    class="whatwedo-tab w-full text-left px-4 py-2 rounded-xl text-sm font-semibold bg-slate-100 dark:bg-slate-800 text-primary"
+                                    data-target="whatwedo-services">
+                                    Services
+                                </button>
+                                <button
+                                    class="whatwedo-tab w-full text-left px-4 py-2 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+                                    data-target="whatwedo-technology">
+                                    Technology
+                                </button>
+                                <button
+                                    class="whatwedo-tab w-full text-left px-4 py-2 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+                                    data-target="whatwedo-industry">
+                                    Industry
+                                </button>
+                            </div>
+                            <div class="w-2/3 pl-2">
+                                <div id="whatwedo-services" class="whatwedo-panel space-y-3">
+                                    <p class="text-xs font-bold tracking-[0.2em] uppercase text-primary/80">Services
+                                    </p>
+                                    <h4 class="text-lg font-extrabold text-slate-900 dark:text-white mb-2">Our Core
+                                        Services</h4>
+                                    <div class="flex flex-col md:flex-row gap-6">
+                                        <ul
+                                            class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-200 md:w-1/2">
+                                            <li>
+                                                <a href="../web-development/" data-service-detail="web"
+                                                    class="service-link inline-block border-b-2 border-blue-500 pb-0.5 hover:text-primary">
+                                                    Web Development
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="../android-application/" data-service-detail="android"
+                                                    class="service-link inline-block border-b-2 border-blue-500 pb-0.5 hover:text-primary">
+                                                    Android Application
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="../ios-app-development/" data-service-detail="ios"
+                                                    class="service-link inline-block border-b-2 border-blue-500 pb-0.5 hover:text-primary">
+                                                    iOS App Development
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="../cloud-solution/" data-service-detail="cloud"
+                                                    class="service-link inline-block border-b-2 border-blue-500 pb-0.5 hover:text-primary">
+                                                    Cloud Solution
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="../n8n-automation/" data-service-detail="n8n"
+                                                    class="service-link inline-block border-b-2 border-blue-500 pb-0.5 hover:text-primary">
+                                                    N8N Automation
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div id="service-detail"
+                                            class="md:w-1/2 bg-slate-50 dark:bg-slate-800/70 rounded-2xl border border-slate-200 dark:border-slate-700 p-4 text-xs md:text-sm text-slate-600 dark:text-slate-300">
+                                            <p id="service-detail-title"
+                                                class="text-sm font-semibold text-slate-900 dark:text-white mb-1">
+                                                Web Development
+                                            </p>
+                                            <p id="service-detail-body">
+                                                High-performing websites and web apps tailored for your business growth.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="whatwedo-technology" class="whatwedo-panel hidden space-y-3">
+                                    <p class="text-xs font-bold tracking-[0.2em] uppercase text-primary/80">Technology
+                                    </p>
+                                    <h4 class="text-lg font-extrabold text-slate-900 dark:text-white mb-2">
+                                        Technologies & Languages</h4>
+                                    <div class="grid grid-cols-2 gap-3 text-sm text-slate-700 dark:text-slate-200">
+                                        <div class="space-y-1">
+                                            <p class="font-semibold text-slate-900 dark:text-white">Frontend</p>
+                                            <ul class="space-y-1">
+                                                <li>HTML5</li>
+                                                <li>CSS3</li>
+                                                <li>React</li>
+                                                <li>Next.js</li>
+                                            </ul>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <p class="font-semibold text-slate-900 dark:text-white">Backend</p>
+                                            <ul class="space-y-1">
+                                                <li>Node.js</li>
+                                                <li>Python</li>
+                                                <li>PHP</li>
+                                            </ul>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <p class="font-semibold text-slate-900 dark:text-white">Mobile</p>
+                                            <ul class="space-y-1">
+                                                <li>Java</li>
+                                                <li>Kotlin</li>
+                                                <li>Flutter</li>
+                                                <li>iOS</li>
+                                            </ul>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <p class="font-semibold text-slate-900 dark:text-white">Data & DevOps</p>
+                                            <ul class="space-y-1">
+                                                <li>MongoDB</li>
+                                                <li>MySQL / SQL</li>
+                                                <li>PostgreSQL</li>
+                                                <li>Prisma</li>
+                                                <li>Supabase</li>
+                                                <li>Kubernetes</li>
+                                                <li>Docker</li>
+                                            </ul>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <p class="font-semibold text-slate-900 dark:text-white">Automation</p>
+                                            <ul class="space-y-1">
+                                                <li>n8n</li>
+                                                <li>OpenClawd</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="whatwedo-industry" class="whatwedo-panel hidden space-y-3">
+                                    <p class="text-xs font-bold tracking-[0.2em] uppercase text-primary/80">Industry
+                                    </p>
+                                    <h4 class="text-lg font-extrabold text-slate-900 dark:text-white mb-2">Industries
+                                        We Serve</h4>
+                                    <ul class="grid grid-cols-2 gap-2 text-sm text-slate-700 dark:text-slate-200">
+                                        <li>FinTech & Banking</li>
+                                        <li>eCommerce & Retail</li>
+                                        <li>Logistics & Supply Chain</li>
+                                        <li>Healthcare & Wellness</li>
+                                        <li>EdTech & E‑Learning</li>
+                                        <li>SaaS & B2B Platforms</li>
+                                        <li>Travel & Hospitality</li>
+                                        <li>Media & Entertainment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="../portfolio/">Case
+                    Studies</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="../tech-stack/">Our Tech
+                    Stack</a>
+                <div class="relative">
+                    <button id="company-toggle" type="button"
+                        class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors">
+                        Company
+                        <span class="material-symbols-outlined text-base">expand_more</span>
+                    </button>
+                    <div id="company-menu"
+                        class="invisible opacity-0 translate-y-2 pointer-events-none transition-all duration-200 absolute right-0 top-full mt-4 z-50">
+                        <div
+                            class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 w-[320px] py-4 pl-[3.25rem] pr-4 flex flex-col gap-1 relative overflow-hidden">
+                            <div class="absolute left-0 top-0 bottom-0 w-10 bg-slate-50 dark:bg-slate-800/30 flex items-center justify-center border-r border-slate-100 dark:border-slate-700/50">
+                                <span class="transform -rotate-90 whitespace-nowrap text-[10px] font-bold tracking-[0.3em] text-slate-300 dark:text-slate-600 uppercase">Company</span>
+                            </div>
+                            <a href="../about/"
+                                class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                                <span class="material-symbols-outlined text-primary text-lg">apartment</span>
+                                About Us
+                            </a>
+                            <a href="../insights/"
+                                class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                                <span class="material-symbols-outlined text-primary text-lg">article</span>
+                                Insights
+                            </a>
+                            <a href="../portfolio/"
+                                class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                                <span class="material-symbols-outlined text-primary text-lg">work</span>
+                                Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a rel="noopener noreferrer" href="https://wa.me/917001545612" target="_blank"
+                    class="hidden sm:flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.488-1.761-1.663-2.059-.175-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    Whatsapp Now
+                </a>
+                <button class="md:hidden text-slate-900 dark:text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section
+        class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-72 h-72 bg-primary rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 text-center">
+            <p class="text-primary font-bold tracking-widest uppercase text-sm mb-4">TechnoRapide Blog</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">Insights & Articles</h1>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                Stay ahead with the latest in technology, development, and digital transformation.
+            </p>
+        </div>
+    </section>
+
+    <!-- Search & Filter Bar -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 -mt-8 relative z-20">
+        <div
+            class="bg-white rounded-2xl shadow-xl border border-slate-200 p-4 flex flex-col sm:flex-row items-stretch gap-4">
+            <div class="flex-1 relative">
+                <span
+                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                <input type="text" id="search-input" placeholder="Search articles..."
+                    class="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" />
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="text-xs font-bold uppercase tracking-widest text-slate-400 hidden sm:block">Sort:</span>
+                <select id="sort-select"
+                    class="bg-slate-50 border border-slate-200 rounded-xl pl-4 pr-10 py-3 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all cursor-pointer">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="az">A → Z</option>
+                    <option value="za">Z → A</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Count & Stats -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 mt-8 flex items-center justify-between">
+        <p id="blog-count" class="text-sm text-slate-400 font-medium"></p>
+    </div>
+
+    <!-- Blog Grid -->
+    <main class="flex-1 max-w-7xl mx-auto px-6 lg:px-12 py-10">
+        <!-- Loading Progress -->
+        <div id="loading-grid" class="flex flex-col items-center justify-center py-32 gap-6 w-full fade-in">
+            <div class="relative flex items-center justify-center">
+                <span class="material-symbols-outlined text-6xl text-primary animate-spin absolute">autorenew</span>
+                <div class="w-20 h-20 border-4 border-slate-200 border-t-primary rounded-full animate-spin"></div>
+            </div>
+            <div class="text-center">
+                <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-2">Loading Insights...</h3>
+                <p class="text-slate-500 text-sm">Fetching the latest articles for you.</p>
+            </div>
+        </div>
+
+        <!-- Actual Grid -->
+        <div id="blog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 hidden"></div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="hidden text-center py-20">
+            <span class="material-symbols-outlined text-6xl text-slate-300 mb-4">search_off</span>
+            <p class="text-xl font-bold text-slate-400">No articles found</p>
+            <p class="text-sm text-slate-400 mt-2">Try a different search term</p>
+        </div>
+
+        <!-- Load More -->
+        <div id="load-more-wrap" class="hidden text-center mt-12">
+            <button id="load-more-btn"
+                class="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                <span class="material-symbols-outlined">expand_more</span>
+                Load More Articles
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 py-8">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-slate-400">© 2024 TechnoRapide Solutions Inc. All rights reserved.</p>
+            <a href="../" class="text-sm font-bold text-primary hover:underline flex items-center gap-1">
+                <span class="material-symbols-outlined text-base">home</span>
+                Back to Home
+            </a>
+        </div>
+    </footer>
+
+    <script>
+            (function () {
+                let allBlogs = [];
+                let filteredBlogs = [];
+                let displayCount = 12;
+                const PER_PAGE = 12;
+
+                async function init() {
+                    try {
+                        const res = await fetch('https://apifinal.technorapide.com/api/blogs');
+                        if (!res.ok) throw new Error('API Error');
+                        const data = await res.json();
+                        if (!data || !data.length) {
+                            showEmpty();
+                            return;
+                        }
+
+                        allBlogs = data;
+                        filteredBlogs = [...allBlogs];
+                        render();
+                    } catch (err) {
+                        console.error('Error fetching blogs:', err);
+                        const loadingGrid = document.getElementById('loading-grid');
+                        if (loadingGrid) {
+                            loadingGrid.innerHTML = `
+                                <div class="col-span-1 sm:col-span-2 lg:col-span-3 text-center py-16 flex flex-col items-center justify-center gap-3">
+                                    <span class="material-symbols-outlined text-4xl text-primary animate-spin">autorenew</span>
+                                    <h3 class="text-xl font-bold text-slate-800">Hang tight, fetching data...</h3>
+                                    <p class="text-slate-500 text-sm max-w-md mx-auto">We're automatically retrying the connection until the articles load. Thank you for your patience.</p>
+                                    <button onclick="window.location.reload()" class="mt-4 px-6 py-2.5 bg-primary text-white font-bold rounded-xl flex items-center gap-2 hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                                        <span class="material-symbols-outlined text-base">refresh</span> Force Reload
+                                    </button>
+                                </div>
+                            `;
+                            setTimeout(init, 3500);
+                        }
+                    }
+                }
+
+                function render() {
+                    const grid = document.getElementById('blog-grid');
+                    const loadingGrid = document.getElementById('loading-grid');
+                    const emptyState = document.getElementById('empty-state');
+                    const loadMoreWrap = document.getElementById('load-more-wrap');
+                    const blogCount = document.getElementById('blog-count');
+
+                    const toShow = filteredBlogs.slice(0, displayCount);
+
+                    blogCount.textContent = `Showing ${toShow.length} of ${filteredBlogs.length} articles`;
+
+                    if (filteredBlogs.length === 0) {
+                        showEmpty();
+                        return;
+                    }
+
+                    emptyState.classList.add('hidden');
+
+                    grid.innerHTML = toShow.map((blog, i) => {
+                        const title = blog.name || 'Untitled';
+                        let imgSrc = '';
+                        if (blog.imglink && blog.imglink.length > 0) {
+                            imgSrc = typeof blog.imglink[0] === 'string' ? blog.imglink[0].replace(/`/g, '').trim() : blog.imglink[0];
+                        }
+                        if (!imgSrc && blog.logolink) {
+                            imgSrc = typeof blog.logolink === 'string' ? blog.logolink.replace(/`/g, '').trim() : blog.logolink;
+                        }
+                        if (!imgSrc) imgSrc = 'https://via.placeholder.com/800x600?text=No+Image';
+
+                        const shortDes = blog.shortdes || '';
+                        const date = blog.createdAt ? new Date(blog.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) : '';
+
+                        return `
+                        <div class="card-animate cursor-pointer group" style="animation-delay: ${Math.min(i * 0.05, 0.5)}s;" data-blog-index="${i}" onclick="openBlog(${i})">
+                            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 relative shadow-md group-hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
+                                <img src="${imgSrc}" alt="${title}" loading="lazy"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    onerror="this.src='https://via.placeholder.com/800x600?text=No+Image'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div class="absolute bottom-4 right-4 size-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                    <span class="material-symbols-outlined text-lg">arrow_outward</span>
+                                </div>
+                                ${date ? `<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-xs font-bold text-slate-600 px-3 py-1.5 rounded-full">${date}</div>` : ''}
+                            </div>
+                            <div class="mt-5 flex flex-col gap-2">
+                                <h3 class="text-base font-extrabold leading-snug text-slate-900 group-hover:text-primary transition-colors duration-300 line-clamp-2">${title}</h3>
+                                ${shortDes ? `<p class="text-sm text-slate-500 leading-relaxed line-clamp-2">${shortDes}</p>` : ''}
+                                <div class="flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-slate-400 mt-1">
+                                    <span>Insight</span>
+                                    <span class="size-1 bg-primary rounded-full"></span>
+                                    <span class="text-primary">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    }).join('');
+
+                    loadingGrid.classList.add('hidden');
+                    grid.classList.remove('hidden');
+
+                    // Show/hide load more
+                    if (displayCount < filteredBlogs.length) {
+                        loadMoreWrap.classList.remove('hidden');
+                    } else {
+                        loadMoreWrap.classList.add('hidden');
+                    }
+                }
+
+                function showEmpty() {
+                    document.getElementById('loading-grid').classList.add('hidden');
+                    document.getElementById('blog-grid').classList.add('hidden');
+                    document.getElementById('empty-state').classList.remove('hidden');
+                    document.getElementById('load-more-wrap').classList.add('hidden');
+                    document.getElementById('blog-count').textContent = '0 articles found';
+                }
+
+                function applyFilters() {
+                    const query = document.getElementById('search-input').value.toLowerCase().trim();
+                    const sort = document.getElementById('sort-select').value;
+
+                    filteredBlogs = allBlogs.filter(b => {
+                        const name = (b.name || '').toLowerCase();
+                        const shortdes = (b.shortdes || '').toLowerCase();
+                        return name.includes(query) || shortdes.includes(query);
+                    });
+
+                    switch (sort) {
+                        case 'oldest':
+                            filteredBlogs.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+                            break;
+                        case 'newest':
+                            filteredBlogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+                            break;
+                        case 'az':
+                            filteredBlogs.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+                            break;
+                        case 'za':
+                            filteredBlogs.sort((a, b) => (b.name || '').localeCompare(a.name || ''));
+                            break;
+                    }
+
+                    displayCount = PER_PAGE;
+                    render();
+                }
+
+                // Make openBlog global
+                window.openBlog = function (index) {
+                    const blog = filteredBlogs[index];
+                    if (!blog) return;
+                    const clean = { ...blog };
+                    if (clean.imglink) clean.imglink = clean.imglink.map(l => typeof l === 'string' ? l.replace(/`/g, '').trim() : l);
+                    localStorage.setItem('selectedBlog', JSON.stringify(clean));
+                    window.location.href = '../blog-details/';
+                };
+
+                // Search
+                let searchTimer;
+                document.getElementById('search-input').addEventListener('input', () => {
+                    clearTimeout(searchTimer);
+                    searchTimer = setTimeout(applyFilters, 300);
+                });
+
+                // Sort
+                document.getElementById('sort-select').addEventListener('change', applyFilters);
+
+                // Load more
+                document.getElementById('load-more-btn').addEventListener('click', () => {
+                    displayCount += PER_PAGE;
+                    render();
+                });
+
+                document.addEventListener('DOMContentLoaded', init);
+            })();
+    </script>
+    <script src="../script.js"></script>
+
+    <!-- Security Config & Service Worker -->
+    <script src="/config.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Security Worker Registered'))
+                    .catch(err => console.log('Security Worker Error:', err));
+            });
+        }
+    </script>
+</body>
+
+</html>

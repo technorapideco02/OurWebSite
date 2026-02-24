@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog Details | TechnoRapide</title>
+    <meta name="description"
+        content="Read detailed insights from TechnoRapide on technology, development, and digital transformation.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3b82f6",
+                        "background-light": "#f8fafc",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .dark .nav-glass {
+            background: rgba(16, 22, 34, 0.85);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .blog-body p {
+            margin-bottom: 1.25rem;
+            line-height: 1.85;
+        }
+
+        .blog-body ul,
+        .blog-body ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+
+        .blog-body li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+
+        .blog-body a {
+            color: #3b82f6;
+            text-decoration: underline;
+        }
+
+        .blog-body a:hover {
+            color: #2563eb;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+    </style>
+
+    <style>
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .nav-glass {
+            background: rgba(16, 22, 34, 0.8);
+        }
+        .font-gafiya {
+            font-family: 'Gafiya', 'Playfair Display', serif;
+        }
+        .font-vartensie {
+            font-family: 'Vartensie', 'Great Vibes', cursive;
+        }
+        .font-runiga {
+            font-family: 'Runiga', 'Playfair Display', serif;
+        }
+    </style>
+<style type="text/tailwindcss">
+        @font-face {
+            font-family: 'Runiga';
+            src: local('Runiga');
+        }
+
+        @font-face {
+            font-family: 'Gafiya';
+            src: local('Gafiya');
+        }
+
+        @font-face {
+            font-family: 'Vartensie';
+            src: local('Vartensie');
+        }
+</style>
+</head>
+
+<body class="bg-background-light font-display text-slate-900 min-h-screen">
+<nav class="sticky top-0 z-50 nav-glass border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <div class="flex flex-col justify-center items-center gap-0">
+                <span class="text-3xl font-gafiya tracking-tight text-slate-900 dark:text-white leading-none">
+                    Techno<span class="text-primary">Rapide</span>
+                </span>
+                <span class="text-[10px] font-bold tracking-[0.15em] text-primary/80 uppercase mt-1">Dream Big, Build
+                    Bigger.</span>
+            </div>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="../">Back to Home</a>
+                <div class="relative">
+                    <button id="whatwedo-toggle" type="button"
+                        class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors">
+                        What We Do?
+                        <span class="material-symbols-outlined text-base">expand_more</span>
+                    </button>
+                    <div id="whatwedo-menu"
+                        class="invisible opacity-0 translate-y-2 pointer-events-none transition-all duration-200 absolute left-1/2 -translate-x-1/2 top-full mt-4">
+                        <div
+                            class="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-700 w-[960px] max-w-[95vw] pl-20 pr-8 relative overflow-hidden py-7 flex gap-10">
+                            <div class="absolute left-0 top-0 bottom-0 w-12 bg-slate-50 dark:bg-slate-800/30 flex items-center justify-center border-r border-slate-100 dark:border-slate-700/50">
+                                <span class="transform -rotate-90 whitespace-nowrap text-xs font-bold tracking-[0.3em] text-slate-300 dark:text-slate-600 uppercase">What We Do</span>
+                            </div>
+                            <button id="whatwedo-close" type="button"
+                                class="absolute top-3 right-3 size-8 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500">
+                                <span class="material-symbols-outlined text-lg">close</span>
+                            </button>
+                            <div class="w-1/3 border-r border-slate-200 dark:border-slate-700 pr-4 flex flex-col gap-2">
+                                <button
+                                    class="whatwedo-tab w-full text-left px-4 py-2 rounded-xl text-sm font-semibold bg-slate-100 dark:bg-slate-800 text-primary"
+                                    data-target="whatwedo-services">
+                                    Services
+                                </button>
+                                <button
+                                    class="whatwedo-tab w-full text-left px-4 py-2 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+                                    data-target="whatwedo-technology">
+                                    Technology
+                                </button>
+                                <button
+                                    class="whatwedo-tab w-full text-left px-4 py-2 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+                                    data-target="whatwedo-industry">
+                                    Industry
+                                </button>
+                            </div>
+                            <div class="w-2/3 pl-2">
+                                <div id="whatwedo-services" class="whatwedo-panel space-y-3">
+                                    <p class="text-xs font-bold tracking-[0.2em] uppercase text-primary/80">Services
+                                    </p>
+                                    <h4 class="text-lg font-extrabold text-slate-900 dark:text-white mb-2">Our Core
+                                        Services</h4>
+                                    <div class="flex flex-col md:flex-row gap-6">
+                                        <ul
+                                            class="flex flex-col gap-2 text-sm text-slate-700 dark:text-slate-200 md:w-1/2">
+                                            <li>
+                                                <a href="../web-development/" data-service-detail="web"
+                                                    class="service-link inline-block border-b-2 border-blue-500 pb-0.5 hover:text-primary">
+                                                    Web Development
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="../android-application/" data-service-detail="android"
+                                                    class="service-link inline-block border-b-2 border-blue-500 pb-0.5 hover:text-primary">
+                                                    Android Application
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="../ios-app-development/" data-service-detail="ios"
+                                                    class="service-link inline-block border-b-2 border-blue-500 pb-0.5 hover:text-primary">
+                                                    iOS App Development
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="../cloud-solution/" data-service-detail="cloud"
+                                                    class="service-link inline-block border-b-2 border-blue-500 pb-0.5 hover:text-primary">
+                                                    Cloud Solution
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="../n8n-automation/" data-service-detail="n8n"
+                                                    class="service-link inline-block border-b-2 border-blue-500 pb-0.5 hover:text-primary">
+                                                    N8N Automation
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div id="service-detail"
+                                            class="md:w-1/2 bg-slate-50 dark:bg-slate-800/70 rounded-2xl border border-slate-200 dark:border-slate-700 p-4 text-xs md:text-sm text-slate-600 dark:text-slate-300">
+                                            <p id="service-detail-title"
+                                                class="text-sm font-semibold text-slate-900 dark:text-white mb-1">
+                                                Web Development
+                                            </p>
+                                            <p id="service-detail-body">
+                                                High-performing websites and web apps tailored for your business growth.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="whatwedo-technology" class="whatwedo-panel hidden space-y-3">
+                                    <p class="text-xs font-bold tracking-[0.2em] uppercase text-primary/80">Technology
+                                    </p>
+                                    <h4 class="text-lg font-extrabold text-slate-900 dark:text-white mb-2">
+                                        Technologies & Languages</h4>
+                                    <div class="grid grid-cols-2 gap-3 text-sm text-slate-700 dark:text-slate-200">
+                                        <div class="space-y-1">
+                                            <p class="font-semibold text-slate-900 dark:text-white">Frontend</p>
+                                            <ul class="space-y-1">
+                                                <li>HTML5</li>
+                                                <li>CSS3</li>
+                                                <li>React</li>
+                                                <li>Next.js</li>
+                                            </ul>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <p class="font-semibold text-slate-900 dark:text-white">Backend</p>
+                                            <ul class="space-y-1">
+                                                <li>Node.js</li>
+                                                <li>Python</li>
+                                                <li>PHP</li>
+                                            </ul>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <p class="font-semibold text-slate-900 dark:text-white">Mobile</p>
+                                            <ul class="space-y-1">
+                                                <li>Java</li>
+                                                <li>Kotlin</li>
+                                                <li>Flutter</li>
+                                                <li>iOS</li>
+                                            </ul>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <p class="font-semibold text-slate-900 dark:text-white">Data & DevOps</p>
+                                            <ul class="space-y-1">
+                                                <li>MongoDB</li>
+                                                <li>MySQL / SQL</li>
+                                                <li>PostgreSQL</li>
+                                                <li>Prisma</li>
+                                                <li>Supabase</li>
+                                                <li>Kubernetes</li>
+                                                <li>Docker</li>
+                                            </ul>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <p class="font-semibold text-slate-900 dark:text-white">Automation</p>
+                                            <ul class="space-y-1">
+                                                <li>n8n</li>
+                                                <li>OpenClawd</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="whatwedo-industry" class="whatwedo-panel hidden space-y-3">
+                                    <p class="text-xs font-bold tracking-[0.2em] uppercase text-primary/80">Industry
+                                    </p>
+                                    <h4 class="text-lg font-extrabold text-slate-900 dark:text-white mb-2">Industries
+                                        We Serve</h4>
+                                    <ul class="grid grid-cols-2 gap-2 text-sm text-slate-700 dark:text-slate-200">
+                                        <li>FinTech & Banking</li>
+                                        <li>eCommerce & Retail</li>
+                                        <li>Logistics & Supply Chain</li>
+                                        <li>Healthcare & Wellness</li>
+                                        <li>EdTech & E‑Learning</li>
+                                        <li>SaaS & B2B Platforms</li>
+                                        <li>Travel & Hospitality</li>
+                                        <li>Media & Entertainment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="../portfolio/">Case
+                    Studies</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="../tech-stack/">Our Tech
+                    Stack</a>
+                <div class="relative">
+                    <button id="company-toggle" type="button"
+                        class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors">
+                        Company
+                        <span class="material-symbols-outlined text-base">expand_more</span>
+                    </button>
+                    <div id="company-menu"
+                        class="invisible opacity-0 translate-y-2 pointer-events-none transition-all duration-200 absolute right-0 top-full mt-4 z-50">
+                        <div
+                            class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 w-[320px] py-4 pl-[3.25rem] pr-4 flex flex-col gap-1 relative overflow-hidden">
+                            <div class="absolute left-0 top-0 bottom-0 w-10 bg-slate-50 dark:bg-slate-800/30 flex items-center justify-center border-r border-slate-100 dark:border-slate-700/50">
+                                <span class="transform -rotate-90 whitespace-nowrap text-[10px] font-bold tracking-[0.3em] text-slate-300 dark:text-slate-600 uppercase">Company</span>
+                            </div>
+                            <a href="../about/"
+                                class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                                <span class="material-symbols-outlined text-primary text-lg">apartment</span>
+                                About Us
+                            </a>
+                            <a href="../insights/"
+                                class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                                <span class="material-symbols-outlined text-primary text-lg">article</span>
+                                Insights
+                            </a>
+                            <a href="../portfolio/"
+                                class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                                <span class="material-symbols-outlined text-primary text-lg">work</span>
+                                Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a rel="noopener noreferrer" href="https://wa.me/917001545612" target="_blank"
+                    class="hidden sm:flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.488-1.761-1.663-2.059-.175-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    Whatsapp Now
+                </a>
+                <button class="md:hidden text-slate-900 dark:text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    
+
+    <!-- Blog Content -->
+    <main id="blog-content" class="max-w-4xl mx-auto px-6 py-16">
+        <!-- Loading state -->
+        <div id="blog-loading" class="animate-pulse space-y-8">
+            <div class="h-10 bg-slate-200 rounded-lg w-3/4"></div>
+            <div class="h-6 bg-slate-200 rounded-lg w-1/3"></div>
+            <div class="aspect-[16/9] bg-slate-200 rounded-2xl"></div>
+            <div class="space-y-4">
+                <div class="h-4 bg-slate-200 rounded w-full"></div>
+                <div class="h-4 bg-slate-200 rounded w-5/6"></div>
+                <div class="h-4 bg-slate-200 rounded w-4/5"></div>
+            </div>
+        </div>
+
+        <!-- Rendered Blog -->
+        <article id="blog-article" class="hidden">
+            <!-- Title -->
+            <h1 id="blog-title"
+                class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-6 animate-fade-in-up"></h1>
+
+            <!-- Meta -->
+            <div class="flex flex-wrap items-center gap-3 text-sm text-slate-400 mb-8 animate-fade-in-up"
+                style="animation-delay: 0.1s;">
+                <span class="material-symbols-outlined text-primary text-base">schedule</span>
+                <span id="blog-date"></span>
+                <span class="size-1 bg-slate-300 rounded-full"></span>
+                <span id="blog-category"
+                    class="text-primary font-bold uppercase tracking-widest text-xs bg-primary/10 px-3 py-1 rounded-full"></span>
+            </div>
+
+            <!-- Short Description -->
+            <div id="blog-shortdes-wrap"
+                class="mb-10 p-6 bg-gradient-to-r from-primary/5 to-blue-50 border-l-4 border-primary rounded-r-2xl animate-fade-in-up"
+                style="animation-delay: 0.15s;">
+                <p id="blog-shortdes" class="text-lg text-slate-700 leading-relaxed italic font-medium"></p>
+            </div>
+
+            <!-- Hero Image -->
+            <div id="blog-hero-wrap" class="mb-12 rounded-3xl overflow-hidden shadow-2xl animate-fade-in-up"
+                style="animation-delay: 0.2s;">
+                <img id="blog-hero-img" class="w-full aspect-[16/9] object-cover" alt="" />
+            </div>
+
+            <!-- Body / Long Description -->
+            <div id="blog-body" class="blog-body text-base md:text-lg leading-relaxed text-slate-700 animate-fade-in-up"
+                style="animation-delay: 0.3s;"></div>
+
+            <!-- Source Link -->
+            <div id="blog-source-wrap"
+                class="mt-12 p-6 bg-slate-50 border border-slate-200 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center gap-4 hidden">
+                <div class="flex items-center gap-3">
+                    <div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-primary text-2xl">open_in_new</span>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase font-bold tracking-widest text-slate-400 mb-1">Original Source</p>
+                        <a id="blog-source-link" href="#" target="_blank" rel="noopener"
+                            class="text-primary font-bold hover:underline text-sm break-all"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Images Gallery -->
+            <div id="blog-gallery" class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+
+            <!-- Video Section -->
+            <div id="blog-videos" class="mt-12 space-y-6 hidden"></div>
+
+            <!-- Navigation -->
+            <div
+                class="mt-16 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <a href="../insights/"
+                    class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline">
+                    <span class="material-symbols-outlined text-base">arrow_back</span>
+                    Browse All Insights
+                </a>
+                <a href="../"
+                    class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-primary transition-colors">
+                    Back to Home
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                </a>
+            </div>
+        </article>
+    </main>
+
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const data = localStorage.getItem('selectedBlog');
+            if (!data) {
+                document.getElementById('blog-loading').innerHTML = '<p class="text-center text-slate-500 text-lg py-20">No blog selected. <a href="../" class="text-primary font-bold hover:underline">Go back</a></p>';
+                return;
+            }
+
+            const blog = JSON.parse(data);
+            const loading = document.getElementById('blog-loading');
+            const article = document.getElementById('blog-article');
+
+            // Title
+            document.getElementById('blog-title').textContent = blog.name || 'Untitled';
+            document.title = (blog.name || 'Blog') + ' | TechnoRapide';
+
+            // Date
+            const dateEl = document.getElementById('blog-date');
+            if (blog.createdAt || blog.date) {
+                const d = new Date(blog.createdAt || blog.date);
+                dateEl.textContent = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            } else {
+                dateEl.textContent = 'Recent Post';
+            }
+
+            // Category
+            const catEl = document.getElementById('blog-category');
+            catEl.textContent = blog.category || blog.tag || 'Insight';
+
+            // Short Description
+            const shortDesWrap = document.getElementById('blog-shortdes-wrap');
+            const shortDesEl = document.getElementById('blog-shortdes');
+            if (blog.shortdes && blog.shortdes.trim()) {
+                shortDesEl.textContent = blog.shortdes;
+            } else {
+                shortDesWrap.classList.add('hidden');
+            }
+
+            // Hero image
+            const heroWrap = document.getElementById('blog-hero-wrap');
+            const heroImg = document.getElementById('blog-hero-img');
+            let heroSrc = '';
+            if (blog.imglink && blog.imglink.length > 0 && blog.imglink[0]) {
+                heroSrc = typeof blog.imglink[0] === 'string' ? blog.imglink[0].replace(/`/g, '').trim() : blog.imglink[0];
+            } else if (blog.logolink) {
+                heroSrc = typeof blog.logolink === 'string' ? blog.logolink.replace(/`/g, '').trim() : blog.logolink;
+            }
+            if (heroSrc) {
+                heroImg.src = heroSrc;
+                heroImg.alt = blog.name || 'Blog image';
+            } else {
+                heroWrap.classList.add('hidden');
+            }
+
+            // Body content — check all possible fields
+            const bodyEl = document.getElementById('blog-body');
+            let bodyContent = '';
+
+            if (blog.longdes && blog.longdes.trim()) {
+                // Parse the long description: split by \n or \r\n and wrap in paragraphs
+                bodyContent = formatContent(blog.longdes);
+            } else if (blog.content && blog.content.trim()) {
+                bodyContent = blog.content;
+            } else if (blog.description && blog.description.trim()) {
+                bodyContent = `<p>${blog.description}</p>`;
+            } else if (blog.body && blog.body.trim()) {
+                bodyContent = blog.body;
+            } else if (blog.shortdes && blog.shortdes.trim()) {
+                bodyContent = `<p>${blog.shortdes}</p>`;
+            } else {
+                bodyContent = '<p class="text-slate-400 italic">No content available for this post.</p>';
+            }
+
+            bodyEl.innerHTML = bodyContent;
+
+            // Extract and show source link if present in longdes
+            const sourceWrap = document.getElementById('blog-source-wrap');
+            const sourceLink = document.getElementById('blog-source-link');
+            const urlMatch = (blog.longdes || '').match(/Read more at:\s*(https?:\/\/[^\s]+)/i);
+            if (urlMatch && urlMatch[1]) {
+                sourceLink.href = urlMatch[1];
+                sourceLink.textContent = urlMatch[1];
+                sourceWrap.classList.remove('hidden');
+            }
+
+            // Gallery (additional images)
+            const gallery = document.getElementById('blog-gallery');
+            if (blog.imglink && blog.imglink.length > 1) {
+                gallery.innerHTML = blog.imglink.slice(1).map(src => {
+                    const cleanSrc = typeof src === 'string' ? src.replace(/`/g, '').trim() : src;
+                    return `
+                        <div class="rounded-2xl overflow-hidden shadow-lg">
+                            <img src="${cleanSrc}" alt="Blog image" class="w-full aspect-[4/3] object-cover" loading="lazy">
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Videos
+            const videosContainer = document.getElementById('blog-videos');
+            if (blog.videolink && blog.videolink.length > 0) {
+                const validVideos = blog.videolink.filter(v => v && typeof v === 'string' && v.trim());
+                if (validVideos.length > 0) {
+                    videosContainer.classList.remove('hidden');
+                    videosContainer.innerHTML = '<h3 class="text-2xl font-bold text-slate-900 mb-4">Related Videos</h3>' +
+                        validVideos.map(vid => `
+                            <div class="rounded-2xl overflow-hidden shadow-lg aspect-video">
+                                <iframe src="${vid}" class="w-full h-full" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        `).join('');
+                }
+            }
+
+            loading.classList.add('hidden');
+            article.classList.remove('hidden');
+        });
+
+        function formatContent(text) {
+            if (!text) return '';
+
+            // Check if it already contains HTML tags
+            if (/<[a-z][\s\S]*>/i.test(text)) {
+                return text;
+            }
+
+            // Remove "Read more at: URL" from the visible content
+            let cleaned = text.replace(/\n?\s*Read more at:\s*https?:\/\/[^\s]+/gi, '');
+
+            // Split by double newlines or \r\n patterns for paragraphs
+            const paragraphs = cleaned
+                .split(/\r?\n\r?\n|\r\n/)
+                .map(p => p.trim())
+                .filter(p => p.length > 0);
+
+            if (paragraphs.length <= 1) {
+                // If only one block, try splitting by single newlines
+                const lines = cleaned.split(/\r?\n/).map(l => l.trim()).filter(l => l.length > 0);
+                if (lines.length > 1) {
+                    return lines.map(line => `<p>${line}</p>`).join('');
+                }
+                return `<p>${cleaned.trim()}</p>`;
+            }
+
+            return paragraphs.map(p => `<p>${p}</p>`).join('');
+        }
+    </script>
+
+<footer class="bg-background-light dark:bg-slate-950 pt-24 pb-12 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="https://res.cloudinary.com/dslw83bre/image/upload/v1763506053/profile_pics/mbqwttqwxw4s6m42awwd.webp"
+                            alt="TechnoRapide Logo" class="h-8 w-8 object-contain rounded-lg">
+                        <span class="text-xl font-extrabold tracking-tight">TechnoRapide</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                        Leading the charge in enterprise digital transformation. High-speed, high-quality, high-impact
+                        software.
+                    </p>
+                    
+                </div>
+                <div>
+                    <h5 class="font-bold text-lg mb-6">Services</h5>
+                    <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="../web-development/">Web Development</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="../android-application/">Mobile
+                                Solutions</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../cloud-solution/">Cloud
+                                Architecture</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../n8n-automation/">AI & Automation</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="#technologies">DevOps Services</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-lg mb-6">Company</h5>
+                    <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="../about/">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../about/">Our Team</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="/portfolio/">Case Studies</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../insights/">News & Press</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../about/index.html#contact">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-lg mb-6">Connect With Us</h5>
+                    <div class="grid grid-cols-3 gap-4">
+                        <a href="#" class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-primary hover:text-white transition-colors group" aria-label="LinkedIn">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="#" class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-pink-600 hover:border-pink-600 hover:text-white transition-colors group" aria-label="Instagram">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-red-600 hover:border-red-600 hover:text-white transition-colors group" aria-label="YouTube">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                        </a>
+                        <a href="#" class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-colors group" aria-label="Facebook">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                        <a href="#" class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-slate-800 hover:border-slate-800 hover:text-white transition-colors group" aria-label="GitHub">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="#" class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-indigo-500 hover:border-indigo-500 hover:text-white transition-colors group" aria-label="Discord">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-500">© 2024 TechnoRapide Solutions Inc. All rights reserved.</p>
+                <div class="flex gap-8 text-sm text-slate-500">
+                    <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="../script.js"></script>
+
+    <!-- Security Config & Service Worker -->
+    <script src="/config.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Security Worker Registered'))
+                    .catch(err => console.log('Security Worker Error:', err));
+            });
+        }
+    </script>
+</body>
+
+</html>
