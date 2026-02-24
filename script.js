@@ -255,12 +255,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Mobile Menu Toggle
-    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenuOpen = document.getElementById("mobile-menu-open") || document.getElementById("mobile-menu-button");
     const mobileMenuClose = document.getElementById("mobile-menu-close");
     const mobileMenu = document.getElementById("mobile-menu");
 
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener("click", () => {
+    if (mobileMenuOpen && mobileMenu) {
+        mobileMenuOpen.addEventListener("click", () => {
             mobileMenu.classList.remove("translate-x-full");
             document.body.style.overflow = "hidden"; // Prevent scrolling
         });

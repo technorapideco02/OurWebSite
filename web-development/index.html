@@ -6,7 +6,9 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>TechnoRapide | Advanced Web Development Services</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -117,7 +119,7 @@
 
 <body class="bg-background-light text-slate-900 selection:bg-primary/10">
     <nav class="fixed w-full top-0 z-50 nav-glass border-b border-slate-200 dark:border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-8 lg:px-12 h-20 flex items-center justify-between">
             <div class="flex flex-col justify-center items-center gap-0">
                 <span class="text-3xl font-gafiya tracking-tight text-slate-900 dark:text-white leading-none">
                     Techno<span class="text-primary">Rapide</span>
@@ -336,12 +338,90 @@
                     </svg>
                     Whatsapp Now
                 </a>
-                <button class="md:hidden text-slate-900 dark:text-white">
+                <button id="mobile-menu-button" class="md:hidden text-slate-900 dark:text-white">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[100] bg-white dark:bg-slate-900 translate-x-full transition-transform duration-300 md:hidden overflow-y-auto">
+        <div class="flex flex-col min-h-full">
+            <div class="flex items-center justify-between px-6 h-20 border-b border-slate-100 dark:border-slate-800">
+                <div class="flex flex-col justify-center items-center gap-0">
+                    <span class="text-2xl font-gafiya tracking-tight text-slate-900 dark:text-white leading-none">
+                        Techno<span class="text-primary">Rapide</span>
+                    </span>
+                </div>
+                <button id="mobile-menu-close" class="text-slate-900 dark:text-white p-2">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+
+            <div class="flex-1 py-8 px-6 space-y-8">
+                <!-- HOME -->
+                <div>
+                    <a href="../" class="text-lg font-semibold text-slate-700 dark:text-slate-200">Home</a>
+                </div>
+
+                <div class="h-px bg-slate-100 dark:bg-slate-800"></div>
+
+                <!-- WHAT WE DO -->
+                <div class="space-y-4">
+                    <p class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase">What We Do</p>
+                    <div class="flex flex-col gap-4">
+                        <a href="../web-development/" class="text-lg font-semibold text-primary">Web Development</a>
+                        <a href="../android-application/"
+                            class="text-lg font-semibold text-slate-700 dark:text-slate-200">Android Application</a>
+                        <a href="../ios-app-development/"
+                            class="text-lg font-semibold text-slate-700 dark:text-slate-200">iOS App Development</a>
+                        <a href="../cloud-solution/"
+                            class="text-lg font-semibold text-slate-700 dark:text-slate-200">Cloud Solution</a>
+                        <a href="../n8n-automation/"
+                            class="text-lg font-semibold text-slate-700 dark:text-slate-200">N8N Automation</a>
+                    </div>
+                </div>
+
+                <div class="h-px bg-slate-100 dark:bg-slate-800"></div>
+
+                <!-- Case Studies & Tech Stack -->
+                <div class="flex flex-col gap-4">
+                    <a href="../portfolio/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">Case
+                        Studies</a>
+                    <a href="../tech-stack/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">Our Tech
+                        Stack</a>
+                </div>
+
+                <div class="h-px bg-slate-100 dark:bg-slate-800"></div>
+
+                <!-- COMPANY -->
+                <div class="space-y-4">
+                    <p class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase">Company</p>
+                    <div class="flex flex-col gap-4">
+                        <a href="../about/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">About
+                            Us</a>
+                        <a href="../insights/"
+                            class="text-lg font-semibold text-slate-700 dark:text-slate-200">Insights</a>
+                        <a href="../portfolio/"
+                            class="text-lg font-semibold text-slate-700 dark:text-slate-200">Portfolio</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 border-t border-slate-100 dark:border-slate-800 mt-auto">
+                <a rel="noopener noreferrer" href="https://wa.me/917001545612" target="_blank"
+                    class="flex items-center justify-center gap-3 bg-primary text-white w-full py-4 rounded-xl font-bold text-base shadow-xl shadow-primary/20 hover:bg-primary/90 transition-all">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.488-1.761-1.663-2.059-.175-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    Whatsapp Now
+                </a>
+            </div>
+        </div>
+    </div>
 
     <main class="w-full">
         <!-- Hero Section - Video Background -->
@@ -354,8 +434,8 @@
             <div class="absolute inset-0 bg-slate-900/60 z-10">
             </div>
             <!-- Content: bottom-left -->
-            <div class="relative z-20 w-full px-8 md:px-16 lg:px-24 pb-28 lg:pb-36">
-                <div class="max-w-2xl">
+            <div class="relative z-20 w-full px-8 md:px-16 lg:px-24 pb-20 lg:pb-36">
+                <div class="max-w-2xl text-center md:text-left flex flex-col items-center md:items-start">
                     <div
                         class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-white border border-white/20 text-[10px] font-bold uppercase tracking-wider w-fit mb-6">
                         <span class="relative flex h-1.5 w-1.5">
@@ -365,21 +445,23 @@
                         </span>
                         Elite Web Engineering
                     </div>
-                    <h1 class="text-4xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-4">
+                    <h1
+                        class="text-3xl sm:text-4xl lg:text-6xl font-black text-white leading-tight lg:leading-[1.1] tracking-tight mb-4">
                         Scalable Web Solutions for <span class="text-primary">Global Growth</span>
                     </h1>
-                    <p class="text-base text-white/80 max-w-xl leading-relaxed mb-8">
+                    <p class="text-sm sm:text-base text-white/80 max-w-xl leading-relaxed mb-8 px-4 md:px-0">
                         We build high-performance, secure, and future-proof web applications that drive digital
                         transformation and user engagement.
                     </p>
-                    <div class="flex flex-wrap gap-3">
+                    <div
+                        class="flex flex-col sm:flex-row items-center gap-3 md:gap-6 justify-center md:justify-start px-8 md:px-0">
                         <a href="#contact"
-                            class="px-6 py-3 bg-primary text-white rounded-lg font-bold text-sm hover:scale-[1.02] transition-transform flex items-center gap-2 shadow-lg shadow-primary/30">
+                            class="w-auto min-w-[200px] sm:min-w-0 px-6 py-2.5 bg-primary text-white rounded-xl font-bold text-[13px] md:text-lg hover:scale-105 transition-transform shadow-xl shadow-primary/30 flex items-center justify-center gap-2">
                             Start Your Project
-                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                            <span class="material-symbols-outlined text-[16px] md:text-[20px]">arrow_forward</span>
                         </a>
                         <a href="#services"
-                            class="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/30 text-white rounded-lg font-bold text-sm hover:bg-white/20 transition-colors">
+                            class="w-auto min-w-[200px] sm:min-w-0 px-6 py-2.5 bg-white/10 backdrop-blur-sm border border-white/30 text-white rounded-xl font-bold text-[13px] md:text-lg hover:bg-white/20 transition-colors flex items-center justify-center gap-2">
                             Explore Expertise
                         </a>
                     </div>
@@ -389,107 +471,112 @@
 
         <!-- Services Grid -->
         <section id="services" class="relative z-10 pt-24 pb-20 bg-slate-50 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 lg:px-12">
-                <div class="text-center mb-20 max-w-3xl mx-auto">
+            <div class="max-w-7xl mx-auto px-8 lg:px-12">
+                <div class="text-center mb-16 md:mb-20 max-w-3xl mx-auto">
                     <p class="text-primary font-bold tracking-widest uppercase text-sm mb-4">What We Build</p>
-                    <h2 class="text-4xl font-extrabold mb-6 tracking-tight">Our Core Web Expertise</h2>
-                    <p class="text-lg text-slate-600">From conceptual design to robust server architecture, we cover
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">Our Core Web Expertise</h2>
+                    <p class="text-base md:text-lg text-slate-600 px-4 md:px-0">From conceptual design to robust server
+                        architecture, we cover
                         every layer of the modern web ecosystem.</p>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 px-4 md:px-0">
                     <!-- Front-end -->
                     <div
-                        class="group p-8 bg-white border border-slate-200 rounded-2xl hover:border-primary transition-all shadow-sm hover:shadow-xl hover:-translate-y-1">
+                        class="group p-6 md:p-8 bg-white border border-slate-200 rounded-2xl hover:border-primary transition-all shadow-sm hover:shadow-xl hover:-translate-y-1">
                         <div
-                            class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-3xl">terminal</span>
+                            class="w-12 h-12 md:w-14 md:h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl md:text-3xl">terminal</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-4">Front-end Development</h3>
+                        <h3 class="text-lg md:text-xl font-bold mb-4">Front-end Development</h3>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6">
                             Engaging, pixel-perfect UI/UX implementation using modern frameworks like React, Vue, and
                             Next.js for lightning-fast interactivity.
                         </p>
-                        <ul class="space-y-2 text-xs font-semibold text-slate-500">
+                        <ul class="space-y-2 text-[11px] md:text-xs font-semibold text-slate-500">
                             <li class="flex items-center gap-2"><span
-                                    class="text-primary material-symbols-outlined text-base">check_circle</span>
+                                    class="text-primary material-symbols-outlined text-sm md:text-base">check_circle</span>
                                 Responsive Web Design</li>
                             <li class="flex items-center gap-2"><span
-                                    class="text-primary material-symbols-outlined text-base">check_circle</span> SPAs
+                                    class="text-primary material-symbols-outlined text-sm md:text-base">check_circle</span>
+                                SPAs
                                 &amp; PWAs</li>
                             <li class="flex items-center gap-2"><span
-                                    class="text-primary material-symbols-outlined text-base">check_circle</span>
+                                    class="text-primary material-symbols-outlined text-sm md:text-base">check_circle</span>
                                 Accessibility (WCAG)</li>
                         </ul>
                     </div>
                     <!-- Back-end -->
                     <div
-                        class="group p-8 bg-white border border-slate-200 rounded-2xl hover:border-primary transition-all shadow-sm hover:shadow-xl hover:-translate-y-1">
+                        class="group p-6 md:p-8 bg-white border border-slate-200 rounded-2xl hover:border-primary transition-all shadow-sm hover:shadow-xl hover:-translate-y-1">
                         <div
-                            class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-3xl">database</span>
+                            class="w-12 h-12 md:w-14 md:h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl md:text-3xl">database</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-4">Back-end Architecture</h3>
+                        <h3 class="text-lg md:text-xl font-bold mb-4">Back-end Architecture</h3>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6">
                             Secure, high-availability server-side logic and API integration. We build foundations that
                             handle millions of requests seamlessly.
                         </p>
-                        <ul class="space-y-2 text-xs font-semibold text-slate-500">
+                        <ul class="space-y-2 text-[11px] md:text-xs font-semibold text-slate-500">
                             <li class="flex items-center gap-2"><span
-                                    class="text-primary material-symbols-outlined text-base">check_circle</span>
+                                    class="text-primary material-symbols-outlined text-sm md:text-base">check_circle</span>
                                 Microservices Design</li>
                             <li class="flex items-center gap-2"><span
-                                    class="text-primary material-symbols-outlined text-base">check_circle</span>
+                                    class="text-primary material-symbols-outlined text-sm md:text-base">check_circle</span>
                                 Serverless Functions</li>
                             <li class="flex items-center gap-2"><span
-                                    class="text-primary material-symbols-outlined text-base">check_circle</span>
+                                    class="text-primary material-symbols-outlined text-sm md:text-base">check_circle</span>
                                 Database Tuning</li>
                         </ul>
                     </div>
                     <!-- E-commerce -->
                     <div
-                        class="group p-8 bg-white border border-slate-200 rounded-2xl hover:border-primary transition-all shadow-sm hover:shadow-xl hover:-translate-y-1">
+                        class="group p-6 md:p-8 bg-white border border-slate-200 rounded-2xl hover:border-primary transition-all shadow-sm hover:shadow-xl hover:-translate-y-1">
                         <div
-                            class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-3xl">shopping_cart</span>
+                            class="w-12 h-12 md:w-14 md:h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl md:text-3xl">shopping_cart</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-4">E-commerce Solutions</h3>
+                        <h3 class="text-lg md:text-xl font-bold mb-4">E-commerce Solutions</h3>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6">
                             High-conversion digital stores. We specialize in Shopify, headless commerce, and bespoke
                             shopping experiences for global brands.
                         </p>
-                        <ul class="space-y-2 text-xs font-semibold text-slate-500">
+                        <ul class="space-y-2 text-[11px] md:text-xs font-semibold text-slate-500">
                             <li class="flex items-center gap-2"><span
-                                    class="text-primary material-symbols-outlined text-base">check_circle</span>
+                                    class="text-primary material-symbols-outlined text-sm md:text-base">check_circle</span>
                                 Payment Gateways</li>
                             <li class="flex items-center gap-2"><span
-                                    class="text-primary material-symbols-outlined text-base">check_circle</span>
+                                    class="text-primary material-symbols-outlined text-sm md:text-base">check_circle</span>
                                 Headless Commerce</li>
                             <li class="flex items-center gap-2"><span
-                                    class="text-primary material-symbols-outlined text-base">check_circle</span>
+                                    class="text-primary material-symbols-outlined text-sm md:text-base">check_circle</span>
                                 Multi-currency Support</li>
                         </ul>
                     </div>
                     <!-- CMS -->
                     <div
-                        class="group p-8 bg-white border border-slate-200 rounded-2xl hover:border-primary transition-all shadow-sm hover:shadow-xl hover:-translate-y-1">
+                        class="group p-6 md:p-8 bg-white border border-slate-200 rounded-2xl hover:border-primary transition-all shadow-sm hover:shadow-xl hover:-translate-y-1">
                         <div
-                            class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-3xl">edit_note</span>
+                            class="w-12 h-12 md:w-14 md:h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl md:text-3xl">edit_note</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-4">CMS Development</h3>
+                        <h3 class="text-lg md:text-xl font-bold mb-4">CMS Development</h3>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6">
                             Empowering content teams with flexible tools. Custom WordPress, Strapi, and Contentful
                             implementations designed for marketing autonomy.
                         </p>
-                        <ul class="space-y-2 text-xs font-semibold text-slate-500">
+                        <ul class="space-y-2 text-[11px] md:text-xs font-semibold text-slate-500">
                             <li class="flex items-center gap-2"><span
-                                    class="text-primary material-symbols-outlined text-base">check_circle</span> Strapi
+                                    class="text-primary material-symbols-outlined text-sm md:text-base">check_circle</span>
+                                Strapi
                                 &amp; Contentful</li>
                             <li class="flex items-center gap-2"><span
-                                    class="text-primary material-symbols-outlined text-base">check_circle</span> Custom
+                                    class="text-primary material-symbols-outlined text-sm md:text-base">check_circle</span>
+                                Custom
                                 API Connectors</li>
                             <li class="flex items-center gap-2"><span
-                                    class="text-primary material-symbols-outlined text-base">check_circle</span> SEO
+                                    class="text-primary material-symbols-outlined text-sm md:text-base">check_circle</span>
+                                SEO
                                 Optimization</li>
                         </ul>
                     </div>
@@ -498,64 +585,68 @@
         </section>
 
         <!-- Technology Stack Section -->
-        <section class="py-24 bg-white overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 lg:px-12">
-                <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+        <section class="py-24 bg-white dark:bg-slate-950 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-8 lg:px-12">
+                <div
+                    class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 px-4 md:px-0 text-center md:text-left">
                     <div>
                         <p class="text-primary font-bold tracking-widest uppercase text-sm mb-4">Our Toolbox</p>
-                        <h2 class="text-4xl font-extrabold mb-4 tracking-tight">The Web Tech Stack</h2>
-                        <p class="text-slate-600 max-w-xl">We select the best tools for the job, focusing on security,
+                        <h2 class="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">The Web Tech Stack</h2>
+                        <p class="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-xl">We select the best
+                            tools for the job, focusing on security,
                             scalability, and developer productivity.</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 px-4 md:px-0">
                     <div
-                        class="glass-card p-8 rounded-3xl flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform group">
+                        class="glass-card p-6 md:p-8 rounded-2xl md:rounded-3xl flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform group border border-slate-100 dark:border-slate-800 shadow-sm">
                         <div
-                            class="size-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-4xl">deployed_code</span>
+                            class="size-12 md:size-16 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl md:text-4xl">deployed_code</span>
                         </div>
-                        <span class="font-bold text-slate-800">React.js</span>
+                        <span class="font-bold text-slate-800 dark:text-slate-200 text-xs md:text-base">React.js</span>
                     </div>
                     <div
-                        class="glass-card p-8 rounded-3xl flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform group">
+                        class="glass-card p-6 md:p-8 rounded-2xl md:rounded-3xl flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform group border border-slate-100 dark:border-slate-800 shadow-sm">
                         <div
-                            class="size-16 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-4xl">bolt</span>
+                            class="size-12 md:size-16 rounded-xl md:rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl md:text-4xl">bolt</span>
                         </div>
-                        <span class="font-bold text-slate-800">Next.js</span>
+                        <span class="font-bold text-slate-800 dark:text-slate-200 text-xs md:text-base">Next.js</span>
                     </div>
                     <div
-                        class="glass-card p-8 rounded-3xl flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform group">
+                        class="glass-card p-6 md:p-8 rounded-2xl md:rounded-3xl flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform group border border-slate-100 dark:border-slate-800 shadow-sm">
                         <div
-                            class="size-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-4xl">javascript</span>
+                            class="size-12 md:size-16 rounded-xl md:rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl md:text-4xl">javascript</span>
                         </div>
-                        <span class="font-bold text-slate-800">TypeScript</span>
+                        <span
+                            class="font-bold text-slate-800 dark:text-slate-200 text-xs md:text-base">TypeScript</span>
                     </div>
                     <div
-                        class="glass-card p-8 rounded-3xl flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform group">
+                        class="glass-card p-6 md:p-8 rounded-2xl md:rounded-3xl flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform group border border-slate-100 dark:border-slate-800 shadow-sm">
                         <div
-                            class="size-16 rounded-2xl bg-green-50 flex items-center justify-center text-green-600 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-4xl">terminal</span>
+                            class="size-12 md:size-16 rounded-xl md:rounded-2xl bg-green-50 dark:bg-green-900/20 flex items-center justify-center text-green-600 dark:text-green-400 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl md:text-4xl">terminal</span>
                         </div>
-                        <span class="font-bold text-slate-800">Node.js</span>
+                        <span class="font-bold text-slate-800 dark:text-slate-200 text-xs md:text-base">Node.js</span>
                     </div>
                     <div
-                        class="glass-card p-8 rounded-3xl flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform group">
+                        class="glass-card p-6 md:p-8 rounded-2xl md:rounded-3xl flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform group border border-slate-100 dark:border-slate-800 shadow-sm">
                         <div
-                            class="size-16 rounded-2xl bg-orange-50 flex items-center justify-center text-orange-600 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-4xl">grid_view</span>
+                            class="size-12 md:size-16 rounded-xl md:rounded-2xl bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center text-orange-600 dark:text-orange-400 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl md:text-4xl">grid_view</span>
                         </div>
-                        <span class="font-bold text-slate-800">Vue.js</span>
+                        <span class="font-bold text-slate-800 dark:text-slate-200 text-xs md:text-base">Vue.js</span>
                     </div>
                     <div
-                        class="glass-card p-8 rounded-3xl flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform group">
+                        class="glass-card p-6 md:p-8 rounded-2xl md:rounded-3xl flex flex-col items-center gap-4 hover:-translate-y-1 transition-transform group border border-slate-100 dark:border-slate-800 shadow-sm">
                         <div
-                            class="size-16 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-4xl">storage</span>
+                            class="size-12 md:size-16 rounded-xl md:rounded-2xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-purple-600 dark:text-purple-400 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl md:text-4xl">storage</span>
                         </div>
-                        <span class="font-bold text-slate-800">PostgreSQL</span>
+                        <span
+                            class="font-bold text-slate-800 dark:text-slate-200 text-xs md:text-base">PostgreSQL</span>
                     </div>
                 </div>
             </div>
@@ -563,14 +654,15 @@
 
         <!-- Development Process -->
         <section class="py-24 bg-slate-900 text-white">
-            <div class="max-w-7xl mx-auto px-6 lg:px-12">
-                <div class="grid lg:grid-cols-3 gap-16">
-                    <div class="lg:col-span-1">
+            <div class="max-w-7xl mx-auto px-8 lg:px-12">
+                <div class="grid lg:grid-cols-3 gap-12 lg:gap-16 px-4 md:px-0">
+                    <div class="lg:col-span-1 text-center lg:text-left">
                         <p class="text-primary font-bold tracking-widest uppercase text-sm mb-4">How We Work</p>
-                        <h2 class="text-4xl font-extrabold mb-6 tracking-tight">Our Process</h2>
-                        <p class="text-slate-400 text-lg mb-8 leading-relaxed">We combine agile methodologies with a
+                        <h2 class="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">Our Process</h2>
+                        <p class="text-slate-400 text-base md:text-lg mb-8 leading-relaxed">We combine agile
+                            methodologies with a
                             meticulous engineering mindset to deliver projects on time and above expectations.</p>
-                        <div class="space-y-6">
+                        <div class="space-y-6 hidden lg:block">
                             <div class="flex items-center gap-4">
                                 <div
                                     class="size-12 rounded-full border border-slate-700 flex items-center justify-center text-primary font-bold shrink-0">
@@ -598,14 +690,16 @@
                         </div>
                     </div>
                     <div class="lg:col-span-2">
-                        <div class="relative rounded-3xl overflow-hidden aspect-video border border-slate-800 group">
+                        <div
+                            class="relative rounded-[2rem] overflow-hidden aspect-video border border-slate-800 group shadow-2xl">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQV2sv1B2-f07D3G43yfmAc8EscLIk7pOTUybNimLMWQdGJOTokhvgT52iY-OVnvr8871XQ2Oj6fmfLJoVblCWfWhONEovAhC9hsWGKAq2noz2ctxYKd0ltTfSWqetdK-gUjcE93DvZQhdXgnLn8Z2TrppWdqi3Qvnht3WxPjJt_LXl6FZl9kXriXCc6yhU2QNFau9IlZnB0ECxEGsFMjNNc2c6_7vHvK-IEi5ODfFtp0dGaZaw_Zj9Rwd8JUVFc85sup0LFdCepI"
                                 alt="Team collaborating on web design" />
                             <div class="absolute inset-0 bg-slate-900/40 flex items-center justify-center">
                                 <div
-                                    class="size-20 bg-primary rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-2xl shadow-primary/50">
-                                    <span class="material-symbols-outlined text-white text-4xl">play_arrow</span>
+                                    class="size-16 md:size-20 bg-primary rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-2xl shadow-primary/50">
+                                    <span
+                                        class="material-symbols-outlined text-white text-3xl md:text-4xl">play_arrow</span>
                                 </div>
                             </div>
                         </div>
@@ -614,12 +708,13 @@
             </div>
         </section>
 
-        <!-- CTA Banner (matching home page style) -->
-        <div class="bg-white w-full pt-40 pb-12">
-            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <!-- CTA Banner -->
+        <div class="bg-white dark:bg-slate-950 w-full pt-40 pb-12">
+            <div class="max-w-7xl mx-auto px-8 lg:px-12">
                 <div
-                    class="relative bg-gradient-to-r from-[#215EBD] to-[#8048DA] rounded-[2rem] flex flex-col md:flex-row items-center md:items-center md:min-h-[350px] px-8 md:px-16 py-12 md:py-16 shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
-                    <div class="md:w-[60%] text-white z-30 relative flex flex-col items-start gap-8">
+                    class="relative bg-gradient-to-r from-[#215EBD] to-[#8048DA] rounded-[2rem] flex flex-col md:flex-row items-center md:min-h-[350px] px-8 md:px-16 py-12 md:py-16 shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+                    <div
+                        class="w-full md:w-[60%] text-white z-30 relative flex flex-col items-center md:items-start gap-6 md:gap-8 text-center md:text-left">
                         <h2
                             class="text-3xl md:text-5xl lg:text-5xl font-sans font-extrabold leading-tight tracking-wide">
                             Ready to Build Something<br class="hidden lg:block" /> Extraordinary?
@@ -632,7 +727,7 @@
                     </div>
                     <img src="https://res.cloudinary.com/dslw83bre/image/upload/v1771705551/front-view-young-lady-giving-empty-hand-with-her-document-Photoroom_hcc2n0.png"
                         alt="Professional"
-                        class="absolute bottom-0 right-[-4rem] md:right-[-6rem] lg:right-[-10rem] xl:right-[-8rem] h-[340px] md:h-[500px] lg:h-[560px] w-auto max-w-none object-contain object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.4)] z-20 pointer-events-none">
+                        class="hidden md:block absolute bottom-0 md:right-[-4rem] lg:right-[-10rem] xl:right-[-8rem] h-[280px] sm:h-[340px] md:h-[450px] lg:h-[500px] w-auto max-w-none object-contain object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.4)] z-20 pointer-events-none mt-8 md:mt-0 opacity-50 md:opacity-100">
                 </div>
             </div>
         </div>
@@ -650,18 +745,18 @@
                     transform your
                     digital presence? Reach out to us for a consultation. We reply within 24 hours.</p>
 
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4 justify-start p-4 md:p-0 rounded-xl md:rounded-none">
+                <div class="space-y-6 w-fit mx-auto md:mx-0">
+                    <div class="flex items-start gap-4 p-4 md:p-0">
                         <span class="material-symbols-outlined text-primary text-2xl">mail</span>
-                        <div>
+                        <div class="text-left">
                             <div class="text-xs uppercase font-bold tracking-widest text-slate-500 mb-1">Email</div>
                             <a href="mailto:business@technorapide.com"
                                 class="hover:text-primary transition-colors text-slate-900 dark:text-white font-medium">business@technorapide.com</a>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4 justify-start p-4 md:p-0 rounded-xl md:rounded-none">
+                    <div class="flex items-start gap-4 p-4 md:p-0">
                         <span class="material-symbols-outlined text-primary text-2xl">phone</span>
-                        <div>
+                        <div class="text-left">
                             <div class="text-xs uppercase font-bold tracking-widest text-slate-500 mb-1">Phone</div>
                             <div
                                 class="hover:text-primary transition-colors text-slate-900 dark:text-white font-medium">
@@ -812,7 +907,7 @@
                 <div>
                     <h5 class="font-bold text-lg mb-6">Connect With Us</h5>
                     <div class="grid grid-cols-3 gap-4">
-                        <a href="#"
+                        <a href="https://www.linkedin.com/company/technorapide/?viewAsMember=true"
                             class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-primary hover:text-white transition-colors group"
                             aria-label="LinkedIn">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -820,7 +915,7 @@
                                     d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://www.instagram.com/technorapideindia?igsh=MXBqZTBvMzcxcXZvNg=="
                             class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-pink-600 hover:border-pink-600 hover:text-white transition-colors group"
                             aria-label="Instagram">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -828,7 +923,7 @@
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://www.youtube.com/@technorapideindia"
                             class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-red-600 hover:border-red-600 hover:text-white transition-colors group"
                             aria-label="YouTube">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -836,7 +931,7 @@
                                     d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://www.facebook.com/share/18Ea3Cr97z/"
                             class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-colors group"
                             aria-label="Facebook">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -844,7 +939,7 @@
                                     d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://github.com/organizations/TechnoRapide/"
                             class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-slate-800 hover:border-slate-800 hover:text-white transition-colors group"
                             aria-label="GitHub">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -852,7 +947,7 @@
                                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://discord.gg/DYv2rS2u"
                             class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-indigo-500 hover:border-indigo-500 hover:text-white transition-colors group"
                             aria-label="Discord">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">

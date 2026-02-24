@@ -6,7 +6,9 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>TechnoRapide | Digital Transformation Agency</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -385,45 +387,73 @@
     </nav>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white dark:bg-slate-900 translate-x-full transition-transform duration-300 md:hidden">
-        <div class="flex flex-col h-full">
-            <div class="flex items-center justify-between px-6 h-20 border-b border-slate-200 dark:border-slate-800">
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[100] bg-white dark:bg-slate-900 translate-x-full transition-transform duration-300 md:hidden overflow-y-auto">
+        <div class="flex flex-col min-h-full">
+            <div class="flex items-center justify-between px-6 h-20 border-b border-slate-100 dark:border-slate-800">
                 <div class="flex flex-col justify-center items-center gap-0">
                     <span class="text-2xl font-gafiya tracking-tight text-slate-900 dark:text-white leading-none">
                         Techno<span class="text-primary">Rapide</span>
                     </span>
                 </div>
-                <button id="mobile-menu-close" class="text-slate-900 dark:text-white">
-                    <span class="material-symbols-outlined">close</span>
+                <button id="mobile-menu-close" class="text-slate-900 dark:text-white p-2">
+                    <span class="material-symbols-outlined text-3xl">close</span>
                 </button>
             </div>
-            <div class="flex-1 overflow-y-auto py-8 px-6 space-y-6">
+
+            <div class="flex-1 py-8 px-6 space-y-8">
+                <!-- HOME -->
+                <div>
+                    <a href="index.html" class="text-lg font-semibold text-primary">Home</a>
+                </div>
+
+                <div class="h-px bg-slate-100 dark:bg-slate-800"></div>
+
+                <!-- WHAT WE DO -->
                 <div class="space-y-4">
-                    <p class="text-xs font-bold tracking-widest text-primary uppercase">What We Do</p>
-                    <div class="grid grid-cols-1 gap-4">
-                        <a href="web-development/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">Web Development</a>
-                        <a href="android-application/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">Android Application</a>
-                        <a href="ios-app-development/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">iOS App Development</a>
-                        <a href="cloud-solution/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">Cloud Solution</a>
-                        <a href="n8n-automation/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">N8N Automation</a>
+                    <p class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase">What We Do</p>
+                    <div class="flex flex-col gap-4">
+                        <a href="web-development/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">Web
+                            Development</a>
+                        <a href="android-application/"
+                            class="text-lg font-semibold text-slate-700 dark:text-slate-200">Android Application</a>
+                        <a href="ios-app-development/"
+                            class="text-lg font-semibold text-slate-700 dark:text-slate-200">iOS App Development</a>
+                        <a href="cloud-solution/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">Cloud
+                            Solution</a>
+                        <a href="n8n-automation/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">N8N
+                            Automation</a>
                     </div>
                 </div>
-                <div class="space-y-4 pt-6 border-t border-slate-100 dark:border-slate-800">
-                    <a href="portfolio/" class="block text-lg font-semibold text-slate-700 dark:text-slate-200">Case Studies</a>
-                    <a href="tech-stack/" class="block text-lg font-semibold text-slate-700 dark:text-slate-200">Our Tech Stack</a>
+
+                <div class="h-px bg-slate-100 dark:bg-slate-800"></div>
+
+                <!-- Case Studies & Tech Stack -->
+                <div class="flex flex-col gap-4">
+                    <a href="portfolio/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">Case
+                        Studies</a>
+                    <a href="tech-stack/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">Our Tech
+                        Stack</a>
                 </div>
-                <div class="space-y-4 pt-6 border-t border-slate-100 dark:border-slate-800">
-                    <p class="text-xs font-bold tracking-widest text-primary uppercase">Company</p>
-                    <div class="grid grid-cols-1 gap-4">
+
+                <div class="h-px bg-slate-100 dark:bg-slate-800"></div>
+
+                <!-- COMPANY -->
+                <div class="space-y-4">
+                    <p class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase">Company</p>
+                    <div class="flex flex-col gap-4">
                         <a href="about/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">About Us</a>
-                        <a href="insights/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">Insights</a>
-                        <a href="portfolio/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">Portfolio</a>
+                        <a href="insights/"
+                            class="text-lg font-semibold text-slate-700 dark:text-slate-200">Insights</a>
+                        <a href="portfolio/"
+                            class="text-lg font-semibold text-slate-700 dark:text-slate-200">Portfolio</a>
                     </div>
                 </div>
             </div>
-            <div class="p-6 border-t border-slate-200 dark:border-slate-800">
+
+            <div class="p-6 border-t border-slate-100 dark:border-slate-800 mt-auto">
                 <a rel="noopener noreferrer" href="https://wa.me/917001545612" target="_blank"
-                    class="flex items-center justify-center gap-2 bg-primary text-white px-6 py-4 rounded-xl font-bold text-base hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                    class="flex items-center justify-center gap-3 bg-primary text-white w-full py-4 rounded-xl font-bold text-base shadow-xl shadow-primary/20 hover:bg-primary/90 transition-all">
                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.488-1.761-1.663-2.059-.175-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -446,7 +476,8 @@
         </div>
         <div class="relative z-10 max-w-5xl mx-auto px-12 md:px-6 text-center mt-20 md:mt-12">
 
-            <div class="flex flex-col items-center justify-center mt-4 md:mt-6 px-4 md:px-0 max-w-[300px] sm:max-w-none mx-auto">
+            <div
+                class="flex flex-col items-center justify-center mt-4 md:mt-6 px-4 md:px-0 max-w-sm sm:max-w-none mx-auto">
                 <p class="font-vartensie text-[28px] sm:text-[40px] md:text-[60px] lg:text-[70px] leading-none mb-4 text-slate-100 drop-shadow-lg"
                     style="letter-spacing: 2px;">Your Vision , Our</p>
                 <h1
@@ -455,7 +486,8 @@
                 </h1>
             </div>
 
-            <p class="text-sm md:text-xl text-slate-300 mb-8 md:mb-12 max-w-[310px] sm:max-w-2xl mx-auto leading-relaxed px-4 md:px-0">
+            <p
+                class="text-sm md:text-xl text-slate-300 mb-8 md:mb-12 max-w-sm sm:max-w-2xl mx-auto leading-relaxed px-4 md:px-0">
                 Custom web, mobile, and cloud solutions tailored for the modern enterprise. We build the infrastructure
                 that scales with your ambition.
             </p>
@@ -547,266 +579,579 @@
                 <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-xl mx-auto">Comprehensive solutions for the
                     entire software lifecycle, designed to solve complex business challenges.</p>
             </div>
-            <div
-                class="flex flex-col lg:flex-row gap-8 bg-white/80 dark:bg-slate-800/90 backdrop-blur-xl p-6 md:p-8 rounded-[2rem] shadow-xl border border-slate-200/70 dark:border-slate-700/70 relative">
+            <div class="relative">
+                <!-- Desktop View: Tabs -->
                 <div
-                    class="pointer-events-none absolute -right-20 -bottom-24 w-72 h-72 rounded-full bg-sky-400/10 blur-3xl">
-                </div>
-                <!-- Left Sidebar: Tabs -->
-                <div class="lg:w-1/3 flex flex-row lg:flex-col gap-3 relative overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 no-scrollbar snap-x snap-mandatory px-4 lg:px-0">
-                    <button
-                        class="tab-btn min-w-[160px] md:min-w-[240px] lg:min-w-0 lg:w-full text-left px-4 py-3 md:px-6 md:py-4 rounded-xl font-bold bg-blue-600 text-white shadow-lg shadow-blue-600/30 flex items-center gap-3 md:gap-4 transition-all duration-300 transform hover:scale-[1.02] snap-start"
-                        data-target="service-web">
-                        <span class="material-symbols-outlined text-xl md:text-2xl">language</span> 
-                        <span class="text-xs md:text-base whitespace-nowrap">Web Development</span>
-                    </button>
-                    <button
-                        class="tab-btn min-w-[160px] md:min-w-[240px] lg:min-w-0 lg:w-full text-left px-4 py-3 md:px-6 md:py-4 rounded-xl font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/50 flex items-center gap-3 md:gap-4 transition-all duration-300 transform hover:scale-[1.02] snap-start"
-                        data-target="service-android">
-                        <span class="material-symbols-outlined text-xl md:text-2xl">android</span> 
-                        <span class="text-xs md:text-base whitespace-nowrap">Android Application</span>
-                    </button>
-                    <button
-                        class="tab-btn min-w-[160px] md:min-w-[240px] lg:min-w-0 lg:w-full text-left px-4 py-3 md:px-6 md:py-4 rounded-xl font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/50 flex items-center gap-3 md:gap-4 transition-all duration-300 transform hover:scale-[1.02] snap-start"
-                        data-target="service-ios">
-                        <span class="material-symbols-outlined text-xl md:text-2xl">phone_iphone</span> 
-                        <span class="text-xs md:text-base whitespace-nowrap">iOS Development</span>
-                    </button>
-                    <button
-                        class="tab-btn min-w-[160px] md:min-w-[240px] lg:min-w-0 lg:w-full text-left px-4 py-3 md:px-6 md:py-4 rounded-xl font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/50 flex items-center gap-3 md:gap-4 transition-all duration-300 transform hover:scale-[1.02] snap-start"
-                        data-target="service-cloud">
-                        <span class="material-symbols-outlined text-xl md:text-2xl">cloud</span> 
-                        <span class="text-xs md:text-base whitespace-nowrap">Cloud Solution</span>
-                    </button>
-                    <button
-                        class="tab-btn min-w-[160px] md:min-w-[240px] lg:min-w-0 lg:w-full text-left px-4 py-3 md:px-6 md:py-4 rounded-xl font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/50 flex items-center gap-3 md:gap-4 transition-all duration-300 transform hover:scale-[1.02] snap-start"
-                        data-target="service-n8n">
-                        <span class="material-symbols-outlined text-xl md:text-2xl">precision_manufacturing</span> 
-                        <span class="text-xs md:text-base whitespace-nowrap">N8N Automation</span>
-                    </button>
-                </div>
+                    class="hidden lg:flex flex-row gap-8 bg-white/80 dark:bg-slate-800/90 backdrop-blur-xl p-8 rounded-[2rem] shadow-xl border border-slate-200/70 dark:border-slate-700/70">
+                    <!-- Left Sidebar: Tabs -->
+                    <div class="lg:w-1/3 flex flex-col gap-2 relative">
+                        <button
+                            class="tab-btn w-full text-left px-6 py-4 rounded-xl font-bold bg-blue-600 text-white shadow-lg shadow-blue-600/30 flex items-center gap-4 transition-all duration-300 transform hover:scale-[1.02]"
+                            data-target="service-web">
+                            <span class="material-symbols-outlined text-2xl">language</span> Web Development
+                        </button>
+                        <button
+                            class="tab-btn w-full text-left px-6 py-4 rounded-xl font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/50 flex items-center gap-4 transition-all duration-300 transform hover:scale-[1.02]"
+                            data-target="service-android">
+                            <span class="material-symbols-outlined text-2xl">android</span> Android Application
+                        </button>
+                        <button
+                            class="tab-btn w-full text-left px-6 py-4 rounded-xl font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/50 flex items-center gap-4 transition-all duration-300 transform hover:scale-[1.02]"
+                            data-target="service-ios">
+                            <span class="material-symbols-outlined text-2xl">phone_iphone</span> IOS app Development
+                        </button>
+                        <button
+                            class="tab-btn w-full text-left px-6 py-4 rounded-xl font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/50 flex items-center gap-4 transition-all duration-300 transform hover:scale-[1.02]"
+                            data-target="service-cloud">
+                            <span class="material-symbols-outlined text-2xl">cloud</span> Cloud Solution
+                        </button>
+                        <button
+                            class="tab-btn w-full text-left px-6 py-4 rounded-xl font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/50 flex items-center gap-4 transition-all duration-300 transform hover:scale-[1.02]"
+                            data-target="service-n8n">
+                            <span class="material-symbols-outlined text-2xl">precision_manufacturing</span> N8N
+                            Automotion
+                        </button>
+                    </div>
 
-                <!-- Right Area: Content -->
-                <div class="lg:w-2/3 lg:pl-10 lg:pr-4 py-4 min-h-[400px]">
-
-                    <!-- Web Dev Content -->
-                    <div id="service-web" class="tab-content animate-fade-in-up">
-                        <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">Web Development</h3>
-                        <div
-                            class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
-                            <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Boost your brand's
-                                digital presence with our bespoke web development services. We create scalable,
-                                high-performance websites and enterprise applications optimized for growth and
-                                engagement.</p>
-                        </div>
-
-                        <div
-                            class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Custom SaaS
-                                Platforms</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">E-Commerce
-                                Architecture</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Progressive Web Apps
-                                (PWAs)</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Complex API
-                                Integrations</a>
-                        </div>
-
-                        <!-- Tech Stack Icons -->
-                        <div class="flex flex-wrap gap-4 items-center">
+                    <!-- Right Area: Content -->
+                    <div class="lg:w-2/3 lg:pl-10 lg:pr-4 py-4 min-h-[400px]">
+                        <!-- Web Dev Content -->
+                        <div id="service-web" class="tab-content animate-fade-in-up">
+                            <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">Web Development</h3>
                             <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
+                                <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Boost your
+                                    brand's digital presence with our bespoke web development services. We create
+                                    scalable, high-performance websites and enterprise applications optimized for growth
+                                    and engagement.</p>
+                            </div>
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Custom SaaS
+                                    Platforms</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">E-Commerce
+                                    Architecture</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Progressive Web Apps
+                                    (PWAs)</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Complex API
+                                    Integrations</a>
+                            </div>
+                            <div class="flex flex-wrap gap-4 items-center">
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                        class="size-7" alt="React">
+                                </div>
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                                        class="size-7 dark:invert" alt="Next.js">
+                                </div>
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                        class="size-7" alt="Node.js">
+                                </div>
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                                        class="size-7" alt="Tailwind">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Android Content -->
+                        <div id="service-android" class="tab-content hidden animate-fade-in-up">
+                            <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">Android Application
+                            </h3>
+                            <div
+                                class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
+                                <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Reach billions
+                                    of users worldwide with performant, secure, and intuitive Android applications. From
+                                    concept to Play Store deployment, we handle the entire lifecycle.</p>
+                            </div>
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Native App
+                                    Development</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Kotlin Migration</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Android TV Apps</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">IoT & Wearables
+                                    Integration</a>
+                            </div>
+                            <div class="flex flex-wrap gap-4 items-center">
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+                                        class="size-7" alt="Kotlin">
+                                </div>
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
+                                        class="size-7" alt="Android">
+                                </div>
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                        class="size-7" alt="Java">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- iOS Content -->
+                        <div id="service-ios" class="tab-content hidden animate-fade-in-up">
+                            <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">IOS app Development
+                            </h3>
+                            <div
+                                class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
+                                <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Deliver
+                                    premium experiences to Apple's ecosystem. Our iOS engineers craft beautiful, robust
+                                    applications leveraging the latest Swift technologies and design guidelines.</p>
+                            </div>
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">SwiftUI
+                                    Development</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Legacy Swift
+                                    Refactoring</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Apple Watch
+                                    Integration</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">App Store
+                                    Optimization</a>
+                            </div>
+                            <div class="flex flex-wrap gap-4 items-center">
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"
+                                        class="size-7" alt="Swift">
+                                </div>
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg"
+                                        class="size-7 dark:invert" alt="Apple">
+                                </div>
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                                        class="size-7" alt="Flutter">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cloud Content -->
+                        <div id="service-cloud" class="tab-content hidden animate-fade-in-up">
+                            <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">Cloud Solution</h3>
+                            <div
+                                class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
+                                <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Modernize your
+                                    infrastructure with secure, scalable, and cost-effective cloud solutions. We
+                                    architect zero-downtime systems across major public and hybrid clouds.</p>
+                            </div>
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Cloud Migration
+                                    Strategy</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">DevOps & CI/CD
+                                    Pipelines</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Serverless
+                                    Architectures</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Disaster Recovery
+                                    Planning</a>
+                            </div>
+                            <div class="flex flex-wrap gap-4 items-center">
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                        class="size-10 dark:invert" alt="AWS">
+                                </div>
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                                        class="size-7" alt="GCP">
+                                </div>
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+                                        class="size-7" alt="Azure">
+                                </div>
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                        class="size-7" alt="Docker">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- N8N Content -->
+                        <div id="service-n8n" class="tab-content hidden animate-fade-in-up">
+                            <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">N8N Automotion</h3>
+                            <div
+                                class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
+                                <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Eliminate
+                                    repetitive tasks and streamline your business operations. Our custom n8n workflows
+                                    connect your disparate SaaS tools into a powerful automated engine.</p>
+                            </div>
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Custom Workflow
+                                    Design</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Multi-tenant
+                                    Integration</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">Data
+                                    Synchronization</a>
+                                <a href="#" class="hover:underline underline-offset-4 decoration-2">AI-Powered
+                                    Automations</a>
+                            </div>
+                            <div class="flex flex-wrap gap-4 items-center">
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                        class="size-7" alt="Python">
+                                </div>
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
+                                        class="size-7 text-pink-500" alt="GraphQL">
+                                </div>
+                                <div
+                                    class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm font-bold text-slate-800 dark:text-white">
+                                    API</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile View: Grid of Cards (Much clearer for mobile) -->
+                <div class="lg:hidden grid grid-cols-1 gap-6">
+                    <!-- Web Development Card -->
+                    <div
+                        class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700">
+                        <div class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-primary text-2xl">language</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Web Development</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Boost your brand's
+                            digital presence with our bespoke web development services. Scalable, high-performance
+                            applications.</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center gap-2 text-xs font-bold text-primary">
+                                <span class="size-1.5 rounded-full bg-primary"></span> Custom SaaS Platforms
+                            </div>
+                            <div class="flex items-center gap-2 text-xs font-bold text-primary">
+                                <span class="size-1.5 rounded-full bg-primary"></span> E-Commerce Architecture
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700">
+                            <div class="flex -space-x-2">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                                    class="size-7" alt="React">
-                            </div>
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    class="size-6 bg-white dark:bg-slate-900 rounded-full border border-slate-200 p-1"
+                                    alt="React">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-                                    class="size-7 dark:invert" alt="Next.js">
+                                    class="size-6 bg-white dark:bg-slate-900 rounded-full border border-slate-200 p-1 dark:invert"
+                                    alt="Next.js">
                             </div>
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                                    class="size-7" alt="Node.js">
-                            </div>
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                                    class="size-7" alt="Tailwind">
-                            </div>
+                            <a href="#" class="text-xs font-bold text-primary flex items-center gap-1">Learn More <span
+                                    class="material-symbols-outlined text-xs">arrow_forward</span></a>
                         </div>
                     </div>
 
-                    <!-- Android Content -->
-                    <div id="service-android" class="tab-content hidden animate-fade-in-up">
-                        <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">Android Application</h3>
-                        <div
-                            class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
-                            <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Reach billions of
-                                users worldwide with performant, secure, and intuitive Android applications. From
-                                concept to Play Store deployment, we handle the entire lifecycle.</p>
+                    <!-- Android Application Card -->
+                    <div
+                        class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700">
+                        <div class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-primary text-2xl">android</span>
                         </div>
-
-                        <div
-                            class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Native App
-                                Development</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Kotlin Migration</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Android TV Apps</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">IoT & Wearables
-                                Integration</a>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Android Application</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Reach billions of
+                            users with performant, secure, and intuitive Android apps. Full lifecycle development.</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center gap-2 text-xs font-bold text-primary">
+                                <span class="size-1.5 rounded-full bg-primary"></span> Native App Development
+                            </div>
+                            <div class="flex items-center gap-2 text-xs font-bold text-primary">
+                                <span class="size-1.5 rounded-full bg-primary"></span> Kotlin Migration
+                            </div>
                         </div>
-
-                        <!-- Tech Stack Icons -->
-                        <div class="flex flex-wrap gap-4 items-center">
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div
+                            class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700">
+                            <div class="flex -space-x-2">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
-                                    class="size-7" alt="Kotlin">
-                            </div>
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    class="size-6 bg-white dark:bg-slate-900 rounded-full border border-slate-200 p-1"
+                                    alt="Kotlin">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
-                                    class="size-7" alt="Android">
+                                    class="size-6 bg-white dark:bg-slate-900 rounded-full border border-slate-200 p-1"
+                                    alt="Android">
                             </div>
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                                    class="size-7" alt="Java">
-                            </div>
+                            <a href="#" class="text-xs font-bold text-primary flex items-center gap-1">Learn More <span
+                                    class="material-symbols-outlined text-xs">arrow_forward</span></a>
                         </div>
                     </div>
 
-                    <!-- iOS Content -->
-                    <div id="service-ios" class="tab-content hidden animate-fade-in-up">
-                        <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">IOS app Development</h3>
-                        <div
-                            class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
-                            <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Deliver premium
-                                experiences to Apple's ecosystem. Our iOS engineers craft beautiful, robust applications
-                                leveraging the latest Swift technologies and design guidelines.</p>
+                    <!-- iOS Development Card -->
+                    <div
+                        class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700">
+                        <div class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-primary text-2xl">phone_iphone</span>
                         </div>
-
-                        <div
-                            class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">SwiftUI Development</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Legacy Swift
-                                Refactoring</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Apple Watch
-                                Integration</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">App Store
-                                Optimization</a>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">iOS Development</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Premium experiences
+                            for Apple's ecosystem. Robust applications leveraging the latest Swift tech.</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center gap-2 text-xs font-bold text-primary">
+                                <span class="size-1.5 rounded-full bg-primary"></span> SwiftUI Development
+                            </div>
+                            <div class="flex items-center gap-2 text-xs font-bold text-primary">
+                                <span class="size-1.5 rounded-full bg-primary"></span> App Store Optimization
+                            </div>
                         </div>
-
-                        <!-- Tech Stack Icons -->
-                        <div class="flex flex-wrap gap-4 items-center">
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div
+                            class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700">
+                            <div class="flex -space-x-2">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"
-                                    class="size-7" alt="Swift">
-                            </div>
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    class="size-6 bg-white dark:bg-slate-900 rounded-full border border-slate-200 p-1"
+                                    alt="Swift">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg"
-                                    class="size-7 dark:invert" alt="Apple">
+                                    class="size-6 bg-white dark:bg-slate-900 rounded-full border border-slate-200 p-1 dark:invert"
+                                    alt="Apple">
                             </div>
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-                                    class="size-7" alt="Flutter">
-                            </div>
+                            <a href="#" class="text-xs font-bold text-primary flex items-center gap-1">Learn More <span
+                                    class="material-symbols-outlined text-xs">arrow_forward</span></a>
                         </div>
                     </div>
 
-                    <!-- Cloud Content -->
-                    <div id="service-cloud" class="tab-content hidden animate-fade-in-up">
-                        <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">Cloud Solution</h3>
-                        <div
-                            class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
-                            <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Modernize your
-                                infrastructure with secure, scalable, and cost-effective cloud solutions. We architect
-                                zero-downtime systems across major public and hybrid clouds.</p>
+                    <!-- Cloud Solution Card -->
+                    <div
+                        class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700">
+                        <div class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-primary text-2xl">cloud</span>
                         </div>
-
-                        <div
-                            class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Cloud Migration
-                                Strategy</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">DevOps & CI/CD
-                                Pipelines</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Serverless
-                                Architectures</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Disaster Recovery
-                                Planning</a>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Cloud Solution</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Modernize your
+                            infrastructure with secure, scalable, and cost-effective cloud solutions.</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center gap-2 text-xs font-bold text-primary">
+                                <span class="size-1.5 rounded-full bg-primary"></span> Cloud Migration
+                            </div>
+                            <div class="flex items-center gap-2 text-xs font-bold text-primary">
+                                <span class="size-1.5 rounded-full bg-primary"></span> DevOps & CI/CD
+                            </div>
                         </div>
-
-                        <!-- Tech Stack Icons -->
-                        <div class="flex flex-wrap gap-4 items-center">
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div
+                            class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700">
+                            <div class="flex -space-x-2">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-                                    class="size-10 dark:invert" alt="AWS">
-                            </div>
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
-                                    class="size-7" alt="GCP">
-                            </div>
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
-                                    class="size-7" alt="Azure">
-                            </div>
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    class="size-6 bg-white dark:bg-slate-900 rounded-full border border-slate-200 p-1 dark:invert"
+                                    alt="AWS">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                                    class="size-7" alt="Docker">
+                                    class="size-6 bg-white dark:bg-slate-900 rounded-full border border-slate-200 p-1"
+                                    alt="Docker">
                             </div>
+                            <a href="#" class="text-xs font-bold text-primary flex items-center gap-1">Learn More <span
+                                    class="material-symbols-outlined text-xs">arrow_forward</span></a>
                         </div>
                     </div>
 
-                    <!-- N8N Content -->
-                    <div id="service-n8n" class="tab-content hidden animate-fade-in-up">
-                        <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">N8N Automotion</h3>
-                        <div
-                            class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
-                            <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Eliminate
-                                repetitive tasks and streamline your business operations. Our custom n8n workflows
-                                connect your disparate SaaS tools into a powerful automated engine.</p>
+                    <!-- N8N Automation Card -->
+                    <div
+                        class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700">
+                        <div class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-primary text-2xl">precision_manufacturing</span>
                         </div>
-
-                        <div
-                            class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Custom Workflow
-                                Design</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Multi-tenant
-                                Integration</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">Data Synchronization</a>
-                            <a href="#" class="hover:underline underline-offset-4 decoration-2">AI-Powered
-                                Automations</a>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">N8N Automation</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Eliminate repetitive
+                            tasks and streamline operations with custom n8n workflows.</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center gap-2 text-xs font-bold text-primary">
+                                <span class="size-1.5 rounded-full bg-primary"></span> Custom Workflows
+                            </div>
+                            <div class="flex items-center gap-2 text-xs font-bold text-primary">
+                                <span class="size-1.5 rounded-full bg-primary"></span> AI-Powered Automations
+                            </div>
                         </div>
-
-                        <!-- Tech Stack Icons -->
-                        <div class="flex flex-wrap gap-4 items-center">
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <div
+                            class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700">
+                            <div class="flex -space-x-2">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                                    class="size-7" alt="Python">
+                                    class="size-6 bg-white dark:bg-slate-900 rounded-full border border-slate-200 p-1"
+                                    alt="Python">
+                                <div
+                                    class="size-6 bg-white dark:bg-slate-900 rounded-full border border-slate-200 flex items-center justify-center text-[8px] font-bold">
+                                    API</div>
                             </div>
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
-                                    class="size-7 text-pink-500" alt="GraphQL">
-                            </div>
-                            <div
-                                class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm font-bold text-slate-800 dark:text-white">
-                                API
-                            </div>
+                            <a href="#" class="text-xs font-bold text-primary flex items-center gap-1">Learn More <span
+                                    class="material-symbols-outlined text-xs">arrow_forward</span></a>
                         </div>
                     </div>
-
                 </div>
             </div>
+
+            <!-- Android Content -->
+            <div id="service-android" class="tab-content hidden animate-fade-in-up">
+                <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">Android Application</h3>
+                <div
+                    class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
+                    <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Reach billions of
+                        users worldwide with performant, secure, and intuitive Android applications. From
+                        concept to Play Store deployment, we handle the entire lifecycle.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">Native App
+                        Development</a>
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">Kotlin Migration</a>
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">Android TV Apps</a>
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">IoT & Wearables
+                        Integration</a>
+                </div>
+
+                <!-- Tech Stack Icons -->
+                <div class="flex flex-wrap gap-4 items-center">
+                    <div
+                        class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+                            class="size-7" alt="Kotlin">
+                    </div>
+                    <div
+                        class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
+                            class="size-7" alt="Android">
+                    </div>
+                    <div
+                        class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                            class="size-7" alt="Java">
+                    </div>
+                </div>
+            </div>
+
+            <!-- iOS Content -->
+            <div id="service-ios" class="tab-content hidden animate-fade-in-up">
+                <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">IOS app Development</h3>
+                <div
+                    class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
+                    <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Deliver premium
+                        experiences to Apple's ecosystem. Our iOS engineers craft beautiful, robust applications
+                        leveraging the latest Swift technologies and design guidelines.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">SwiftUI Development</a>
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">Legacy Swift
+                        Refactoring</a>
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">Apple Watch
+                        Integration</a>
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">App Store
+                        Optimization</a>
+                </div>
+
+                <!-- Tech Stack Icons -->
+                <div class="flex flex-wrap gap-4 items-center">
+                    <div
+                        class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"
+                            class="size-7" alt="Swift">
+                    </div>
+                    <div
+                        class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg"
+                            class="size-7 dark:invert" alt="Apple">
+                    </div>
+                    <div
+                        class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                            class="size-7" alt="Flutter">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud Content -->
+            <div id="service-cloud" class="tab-content hidden animate-fade-in-up">
+                <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">Cloud Solution</h3>
+                <div
+                    class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
+                    <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Modernize your
+                        infrastructure with secure, scalable, and cost-effective cloud solutions. We architect
+                        zero-downtime systems across major public and hybrid clouds.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">Cloud Migration
+                        Strategy</a>
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">DevOps & CI/CD
+                        Pipelines</a>
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">Serverless
+                        Architectures</a>
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">Disaster Recovery
+                        Planning</a>
+                </div>
+
+                <!-- Tech Stack Icons -->
+                <div class="flex flex-wrap gap-4 items-center">
+                    <div
+                        class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                            class="size-10 dark:invert" alt="AWS">
+                    </div>
+                    <div
+                        class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                            class="size-7" alt="GCP">
+                    </div>
+                    <div
+                        class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+                            class="size-7" alt="Azure">
+                    </div>
+                    <div
+                        class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                            class="size-7" alt="Docker">
+                    </div>
+                </div>
+            </div>
+
+            <!-- N8N Content -->
+            <div id="service-n8n" class="tab-content hidden animate-fade-in-up">
+                <h3 class="text-3xl font-extrabold mb-6 text-slate-900 dark:text-white">N8N Automotion</h3>
+                <div
+                    class="p-6 border border-slate-300 dark:border-slate-700 border-dashed rounded-2xl mb-8 bg-slate-50 dark:bg-slate-800/50">
+                    <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Eliminate
+                        repetitive tasks and streamline your business operations. Our custom n8n workflows
+                        connect your disparate SaaS tools into a powerful automated engine.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-10 text-primary font-bold text-sm">
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">Custom Workflow
+                        Design</a>
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">Multi-tenant
+                        Integration</a>
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">Data Synchronization</a>
+                    <a href="#" class="hover:underline underline-offset-4 decoration-2">AI-Powered
+                        Automations</a>
+                </div>
+
+                <!-- Tech Stack Icons -->
+                <div class="flex flex-wrap gap-4 items-center">
+                    <div
+                        class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            class="size-7" alt="Python">
+                    </div>
+                    <div
+                        class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
+                            class="size-7 text-pink-500" alt="GraphQL">
+                    </div>
+                    <div
+                        class="size-14 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm font-bold text-slate-800 dark:text-white">
+                        API
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
         </div>
     </section>
 
@@ -824,55 +1169,49 @@
                 </p>
             </div>
 
+            <!-- Desktop View: Tabs -->
             <div
-                class="flex flex-col lg:flex-row bg-white dark:bg-slate-900 rounded-[1.5rem] shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden min-h-[400px]">
+                class="hidden lg:flex flex-row bg-white dark:bg-slate-900 rounded-[1.5rem] shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden min-h-[400px]">
                 <!-- Sidebar -->
-                <div class="lg:w-[30%] bg-[#1a2533] text-slate-300 py-4 lg:py-6 flex flex-row lg:flex-col relative z-10 shadow-lg overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory px-4 lg:px-0 gap-2">
+                <div class="lg:w-[30%] bg-[#1a2533] text-slate-300 py-6 flex flex-col relative z-10 shadow-lg">
                     <button
-                        class="tech-tab tab-active text-left px-5 lg:px-8 py-3 font-bold bg-[#243346] text-white border-b-4 lg:border-b-0 lg:border-r-4 border-blue-500 flex items-center gap-3 md:gap-4 transition-colors shrink-0 snap-start"
+                        class="tech-tab tab-active text-left px-8 py-3 font-bold bg-[#243346] text-white border-r-4 border-blue-500 flex items-center gap-4 transition-colors"
                         data-target="tech-frontend">
-                        <span class="material-symbols-outlined text-xl md:text-2xl">developer_board</span> 
-                        <span class="text-xs md:text-base whitespace-nowrap">Frontend</span>
+                        <span class="material-symbols-outlined">developer_board</span> Frontend
                     </button>
                     <button
-                        class="tech-tab text-left px-5 lg:px-8 py-4 font-bold hover:bg-[#243346]/50 hover:text-white border-b-4 lg:border-b-0 lg:border-r-4 border-transparent flex items-center gap-3 md:gap-4 transition-colors shrink-0 snap-start"
+                        class="tech-tab text-left px-8 py-4 font-bold hover:bg-[#243346]/50 hover:text-white border-r-4 border-transparent flex items-center gap-4 transition-colors"
                         data-target="tech-backend">
-                        <span class="material-symbols-outlined text-xl md:text-2xl">data_object</span> 
-                        <span class="text-xs md:text-base whitespace-nowrap">Backend</span>
+                        <span class="material-symbols-outlined">data_object</span> Backend
                     </button>
                     <button
-                        class="tech-tab text-left px-5 lg:px-8 py-4 font-bold hover:bg-[#243346]/50 hover:text-white border-b-4 lg:border-b-0 lg:border-r-4 border-transparent flex items-center gap-3 md:gap-4 transition-colors shrink-0 snap-start"
+                        class="tech-tab text-left px-8 py-4 font-bold hover:bg-[#243346]/50 hover:text-white border-r-4 border-transparent flex items-center gap-4 transition-colors"
                         data-target="tech-mobile">
-                        <span class="material-symbols-outlined text-xl md:text-2xl">stay_current_portrait</span> 
-                        <span class="text-xs md:text-base whitespace-nowrap">Mobile</span>
+                        <span class="material-symbols-outlined">stay_current_portrait</span> Mobile
                     </button>
                     <button
-                        class="tech-tab text-left px-5 lg:px-8 py-4 font-bold hover:bg-[#243346]/50 hover:text-white border-b-4 lg:border-b-0 lg:border-r-4 border-transparent flex items-center gap-3 md:gap-4 transition-colors shrink-0 snap-start"
+                        class="tech-tab text-left px-8 py-4 font-bold hover:bg-[#243346]/50 hover:text-white border-r-4 border-transparent flex items-center gap-4 transition-colors"
                         data-target="tech-databases">
-                        <span class="material-symbols-outlined text-xl md:text-2xl">database</span> 
-                        <span class="text-xs md:text-base whitespace-nowrap">Databases</span>
+                        <span class="material-symbols-outlined">database</span> Databases
                     </button>
                     <button
-                        class="tech-tab text-left px-5 lg:px-8 py-4 font-bold hover:bg-[#243346]/50 hover:text-white border-b-4 lg:border-b-0 lg:border-r-4 border-transparent flex items-center gap-3 md:gap-4 transition-colors shrink-0 snap-start"
+                        class="tech-tab text-left px-8 py-4 font-bold hover:bg-[#243346]/50 hover:text-white border-r-4 border-transparent flex items-center gap-4 transition-colors"
                         data-target="tech-devops">
-                        <span class="material-symbols-outlined text-xl md:text-2xl">all_inclusive</span> 
-                        <span class="text-xs md:text-base whitespace-nowrap">DevOps</span>
+                        <span class="material-symbols-outlined">all_inclusive</span> DevOps
                     </button>
                     <button
-                        class="tech-tab text-left px-5 lg:px-8 py-4 font-bold hover:bg-[#243346]/50 hover:text-white border-b-4 lg:border-b-0 lg:border-r-4 border-transparent flex items-center gap-3 md:gap-4 transition-colors shrink-0 snap-start"
+                        class="tech-tab text-left px-8 py-4 font-bold hover:bg-[#243346]/50 hover:text-white border-r-4 border-transparent flex items-center gap-4 transition-colors"
                         data-target="tech-automation">
-                        <span class="material-symbols-outlined text-xl md:text-2xl">precision_manufacturing</span> 
-                        <span class="text-xs md:text-base whitespace-nowrap">Automation</span>
+                        <span class="material-symbols-outlined">precision_manufacturing</span> Automation
                     </button>
                 </div>
 
                 <!-- Content Area -->
-                <div class="lg:w-[70%] bg-white dark:bg-slate-900 p-8 lg:p-12 relative overflow-hidden">
-
-                    <!-- Frontend Tab Content -->
+                <div class="lg:w-[70%] bg-white dark:bg-slate-900 p-12 relative overflow-hidden">
+                    <!-- Tab contents remain here for desktop... -->
+                    <!-- Frontend -->
                     <div id="tech-frontend" class="tech-content animate-fade-in-up">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <!-- HTML5 -->
+                        <div class="grid grid-cols-2 gap-4">
                             <div
                                 class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
                                 <div
@@ -882,7 +1221,6 @@
                                 </div>
                                 <span class="font-bold text-slate-800 dark:text-white text-lg">HTML5</span>
                             </div>
-                            <!-- CSS3 -->
                             <div
                                 class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
                                 <div
@@ -892,7 +1230,6 @@
                                 </div>
                                 <span class="font-bold text-slate-800 dark:text-white text-lg">CSS3</span>
                             </div>
-                            <!-- ReactJS -->
                             <div
                                 class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
                                 <div
@@ -902,24 +1239,20 @@
                                 </div>
                                 <span class="font-bold text-slate-800 dark:text-white text-lg">ReactJS</span>
                             </div>
-                            <!-- Next.js -->
                             <div
                                 class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
                                 <div
                                     class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-                                        alt="Next.js" class="w-full h-full object-contain"
-                                        onerror="this.outerHTML='<span class=\'material-symbols-outlined text-4xl text-slate-800 dark:text-white\'>double_arrow</span>'">
+                                        alt="Next.js" class="w-full h-full object-contain dark:invert">
                                 </div>
                                 <span class="font-bold text-slate-800 dark:text-white text-lg">Next.js</span>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Backend Tab Content -->
+                    <!-- Backend -->
                     <div id="tech-backend" class="tech-content hidden animate-fade-in-up">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <!-- Node.js -->
+                        <div class="grid grid-cols-2 gap-4">
                             <div
                                 class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
                                 <div
@@ -929,7 +1262,6 @@
                                 </div>
                                 <span class="font-bold text-slate-800 dark:text-white text-lg">Node.js</span>
                             </div>
-                            <!-- Python -->
                             <div
                                 class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
                                 <div
@@ -939,33 +1271,11 @@
                                 </div>
                                 <span class="font-bold text-slate-800 dark:text-white text-lg">Python</span>
                             </div>
-                            <!-- PHP -->
-                            <div
-                                class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
-                                <div
-                                    class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-                                        alt="PHP" class="w-full h-full object-contain">
-                                </div>
-                                <span class="font-bold text-slate-800 dark:text-white text-lg">PHP</span>
-                            </div>
                         </div>
                     </div>
-
-                    <!-- Mobile Tab Content -->
+                    <!-- Mobile -->
                     <div id="tech-mobile" class="tech-content hidden animate-fade-in-up">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <!-- Java -->
-                            <div
-                                class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
-                                <div
-                                    class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                                        alt="Java" class="w-full h-full object-contain">
-                                </div>
-                                <span class="font-bold text-slate-800 dark:text-white text-lg">Java</span>
-                            </div>
-                            <!-- Kotlin -->
+                        <div class="grid grid-cols-2 gap-4">
                             <div
                                 class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
                                 <div
@@ -975,34 +1285,20 @@
                                 </div>
                                 <span class="font-bold text-slate-800 dark:text-white text-lg">Kotlin</span>
                             </div>
-                            <!-- Flutter -->
                             <div
                                 class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
                                 <div
                                     class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-                                        alt="Flutter" class="w-full h-full object-contain">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"
+                                        alt="Swift" class="w-full h-full object-contain">
                                 </div>
-                                <span class="font-bold text-slate-800 dark:text-white text-lg">Flutter</span>
-                            </div>
-                            <!-- iOS -->
-                            <div
-                                class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
-                                <div
-                                    class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg"
-                                        alt="iOS" class="w-full h-full object-contain">
-                                </div>
-                                <span class="font-bold text-slate-800 dark:text-white text-lg">iOS</span>
+                                <span class="font-bold text-slate-800 dark:text-white text-lg">Swift</span>
                             </div>
                         </div>
                     </div>
-
-
-                    <!-- Databases Tab Content -->
+                    <!-- Databases -->
                     <div id="tech-databases" class="tech-content hidden animate-fade-in-up">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <!-- MongoDB -->
+                        <div class="grid grid-cols-2 gap-4">
                             <div
                                 class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
                                 <div
@@ -1012,17 +1308,6 @@
                                 </div>
                                 <span class="font-bold text-slate-800 dark:text-white text-lg">MongoDB</span>
                             </div>
-                            <!-- SQL / MySQL -->
-                            <div
-                                class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
-                                <div
-                                    class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                                        alt="SQL" class="w-full h-full object-contain">
-                                </div>
-                                <span class="font-bold text-slate-800 dark:text-white text-lg">SQL</span>
-                            </div>
-                            <!-- PostgreSQL -->
                             <div
                                 class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
                                 <div
@@ -1032,82 +1317,304 @@
                                 </div>
                                 <span class="font-bold text-slate-800 dark:text-white text-lg">PostgreSQL</span>
                             </div>
-                            <!-- Prisma -->
-                            <div
-                                class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
-                                <div
-                                    class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
-                                    <span class="material-symbols-outlined text-4xl text-slate-600">database</span>
-                                </div>
-                                <span class="font-bold text-slate-800 dark:text-white text-lg">Prisma</span>
-                            </div>
-                            <!-- Supabase -->
-                            <div
-                                class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
-                                <div
-                                    class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
-                                        alt="Supabase" class="w-full h-full object-contain"
-                                        onerror="this.outerHTML='<span class=\'material-symbols-outlined text-4xl text-emerald-500\'>storage</span>'">
-                                </div>
-                                <span class="font-bold text-slate-800 dark:text-white text-lg">Supabase</span>
-                            </div>
                         </div>
                     </div>
-
-                    <!-- DevOps Tab Content -->
-                    <div id="tech-devops" class="tech-content hidden animate-fade-in-up">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <!-- Kubernetes -->
-                            <div
-                                class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
-                                <div
-                                    class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
-                                        alt="Kubernetes" class="w-full h-full object-contain">
-                                </div>
-                                <span class="font-bold text-slate-800 dark:text-white text-lg">Kubernetes</span>
-                            </div>
-                            <!-- Docker -->
-                            <div
-                                class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
-                                <div
-                                    class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                                        alt="Docker" class="w-full h-full object-contain">
-                                </div>
-                                <span class="font-bold text-slate-800 dark:text-white text-lg">Docker</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Automation Tab Content -->
-                    <div id="tech-automation" class="tech-content hidden animate-fade-in-up">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <!-- N8N -->
-                            <div
-                                class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
-                                <div
-                                    class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
-                                    <span
-                                        class="material-symbols-outlined text-4xl text-blue-600">precision_manufacturing</span>
-                                </div>
-                                <span class="font-bold text-slate-800 dark:text-white text-lg">N8N</span>
-                            </div>
-                            <!-- OpenClawd -->
-                            <div
-                                class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
-                                <div
-                                    class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
-                                    <span class="material-symbols-outlined text-4xl text-purple-600">memory</span>
-                                </div>
-                                <span class="font-bold text-slate-800 dark:text-white text-lg">OpenClawd</span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
+
+            <!-- Mobile View: Modern Pill Selector + Grid -->
+            <div class="lg:hidden">
+                <!-- Category Selector (Horizontal Scroll) -->
+                <div class="flex flex-row gap-2 overflow-x-auto no-scrollbar pb-6 px-2 snap-x">
+                    <button
+                        class="mobile-tech-tab active px-6 py-2.5 rounded-full font-bold text-sm whitespace-nowrap transition-all snap-start"
+                        data-target="m-tech-frontend">Frontend</button>
+                    <button
+                        class="mobile-tech-tab px-6 py-2.5 rounded-full font-bold text-sm whitespace-nowrap transition-all snap-start text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800"
+                        data-target="m-tech-backend">Backend</button>
+                    <button
+                        class="mobile-tech-tab px-6 py-2.5 rounded-full font-bold text-sm whitespace-nowrap transition-all snap-start text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800"
+                        data-target="m-tech-mobile">Mobile</button>
+                    <button
+                        class="mobile-tech-tab px-6 py-2.5 rounded-full font-bold text-sm whitespace-nowrap transition-all snap-start text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800"
+                        data-target="m-tech-databases">Databases</button>
+                    <button
+                        class="mobile-tech-tab px-6 py-2.5 rounded-full font-bold text-sm whitespace-nowrap transition-all snap-start text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800"
+                        data-target="m-tech-devops">DevOps</button>
+                </div>
+
+                <!-- Icons Grid Container -->
+                <div
+                    class="bg-slate-50 dark:bg-slate-900/50 rounded-[2rem] p-8 border border-slate-200 dark:border-slate-800 min-h-[300px]">
+                    <!-- Frontend -->
+                    <div id="m-tech-frontend" class="mobile-tech-content grid grid-cols-3 gap-6 animate-fade-in">
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                class="size-10" alt="React">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">ReactJS</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                                class="size-10 dark:invert" alt="Next.js">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Next.js</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                                class="size-10" alt="Tailwind">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Tailwind</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                                class="size-10" alt="TypeScript">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">TypeScript</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                class="size-10" alt="HTML5">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">HTML5</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                class="size-10" alt="CSS3">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">CSS3</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div id="m-tech-backend" class="mobile-tech-content hidden grid grid-cols-3 gap-6 animate-fade-in">
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                class="size-10" alt="Node.js">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Node.js</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                class="size-10" alt="Python">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Python</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                                class="size-10" alt="PHP">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">PHP</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                class="size-10" alt="Go">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Go</span>
+                        </div>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div id="m-tech-mobile" class="mobile-tech-content hidden grid grid-cols-3 gap-6 animate-fade-in">
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+                                class="size-10" alt="Kotlin">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Kotlin</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"
+                                class="size-10" alt="Swift">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Swift</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                                class="size-10" alt="Flutter">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Flutter</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
+                                class="size-10" alt="Android">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Android</span>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div id="m-tech-databases"
+                        class="mobile-tech-content hidden grid grid-cols-3 gap-6 animate-fade-in">
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                class="size-10" alt="MongoDB">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">MongoDB</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                                class="size-10" alt="PostgreSQL">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">PostgreSQL</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                class="size-10" alt="MySQL">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">MySQL</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                                class="size-10" alt="Redis">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Redis</span>
+                        </div>
+                    </div>
+
+                    <!-- DevOps -->
+                    <div id="m-tech-devops" class="mobile-tech-content hidden grid grid-cols-3 gap-6 animate-fade-in">
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                class="size-10 dark:invert" alt="AWS">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">AWS</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                class="size-10" alt="Docker">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">Docker</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+                                class="size-10" alt="Kubernetes">
+                            <span class="text-[10px] font-bold text-slate-600 dark:text-slate-400">K8s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .mobile-tech-tab.active {
+                    background-color: #2563eb;
+                    color: white;
+                    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+                }
+            </style>
+
+            <script>
+                document.querySelectorAll('.mobile-tech-tab').forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Reset all buttons
+                        document.querySelectorAll('.mobile-tech-tab').forEach(btn => {
+                            btn.classList.remove('active');
+                            btn.classList.add('text-slate-500', 'dark:text-slate-400', 'bg-slate-100', 'dark:bg-slate-800');
+                        });
+
+                        // Set active button
+                        button.classList.add('active');
+                        button.classList.remove('text-slate-500', 'dark:text-slate-400', 'bg-slate-100', 'dark:bg-slate-800');
+
+                        // Hide all content
+                        document.querySelectorAll('.mobile-tech-content').forEach(content => {
+                            content.classList.add('hidden');
+                        });
+
+                        // Show target content
+                        document.getElementById(button.dataset.target).classList.remove('hidden');
+                    });
+                });
+            </script>
+
+            <!-- Databases Tab Content -->
+            <div id="tech-databases" class="tech-content hidden animate-fade-in-up">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- MongoDB -->
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div
+                            class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                alt="MongoDB" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-bold text-slate-800 dark:text-white text-lg">MongoDB</span>
+                    </div>
+                    <!-- SQL / MySQL -->
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div
+                            class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                alt="SQL" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-bold text-slate-800 dark:text-white text-lg">SQL</span>
+                    </div>
+                    <!-- PostgreSQL -->
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div
+                            class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                                alt="PostgreSQL" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-bold text-slate-800 dark:text-white text-lg">PostgreSQL</span>
+                    </div>
+                    <!-- Prisma -->
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div
+                            class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
+                            <span class="material-symbols-outlined text-4xl text-slate-600">database</span>
+                        </div>
+                        <span class="font-bold text-slate-800 dark:text-white text-lg">Prisma</span>
+                    </div>
+                    <!-- Supabase -->
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div
+                            class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
+                                alt="Supabase" class="w-full h-full object-contain"
+                                onerror="this.outerHTML='<span class=\'material-symbols-outlined text-4xl text-emerald-500\'>storage</span>'">
+                        </div>
+                        <span class="font-bold text-slate-800 dark:text-white text-lg">Supabase</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DevOps Tab Content -->
+            <div id="tech-devops" class="tech-content hidden animate-fade-in-up">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Kubernetes -->
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div
+                            class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+                                alt="Kubernetes" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-bold text-slate-800 dark:text-white text-lg">Kubernetes</span>
+                    </div>
+                    <!-- Docker -->
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div
+                            class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                alt="Docker" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-bold text-slate-800 dark:text-white text-lg">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automation Tab Content -->
+            <div id="tech-automation" class="tech-content hidden animate-fade-in-up">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- N8N -->
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div
+                            class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
+                            <span
+                                class="material-symbols-outlined text-4xl text-blue-600">precision_manufacturing</span>
+                        </div>
+                        <span class="font-bold text-slate-800 dark:text-white text-lg">N8N</span>
+                    </div>
+                    <!-- OpenClawd -->
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800/80 rounded-2xl p-4 flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div
+                            class="size-16 bg-white rounded-xl shadow-sm flex items-center justify-center p-3 shrink-0">
+                            <span class="material-symbols-outlined text-4xl text-purple-600">memory</span>
+                        </div>
+                        <span class="font-bold text-slate-800 dark:text-white text-lg">OpenClawd</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
         </div>
     </section>
 
@@ -1211,10 +1718,10 @@
                         <span class="font-semibold">Dedicated 24/7 Enterprise Support</span>
                     </li>
                 </ul>
-                <button
-                    class="px-8 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all">
+                <a href="about/"
+                    class="inline-block px-8 py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all">
                     Read Our Story
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -1222,8 +1729,9 @@
     <div id="cta-card-wrapper" class="bg-white dark:bg-slate-950 w-full pt-20 pb-12">
         <div class="max-w-7xl mx-auto px-8 lg:px-12">
             <div
-                class="relative bg-gradient-to-r from-[#215EBD] to-[#8048DA] rounded-[2rem] flex flex-col md:flex-row items-center md:min-h-[350px] px-8 md:px-16 py-12 md:py-16 shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden">
-                <div class="w-full md:w-[60%] text-white z-30 relative flex flex-col items-start gap-6 md:gap-8 text-center md:text-left items-center md:items-start">
+                class="relative bg-gradient-to-r from-[#215EBD] to-[#8048DA] rounded-[2rem] flex flex-col md:flex-row items-center md:min-h-[350px] px-8 md:px-16 py-12 md:py-16 shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+                <div
+                    class="w-full md:w-[60%] text-white z-30 relative flex flex-col items-start gap-6 md:gap-8 text-center md:text-left items-center md:items-start">
                     <h2 class="text-3xl md:text-5xl lg:text-5xl font-sans font-extrabold leading-tight tracking-wide">
                         Tech-Powered Success Awaits. Empower<br class="hidden lg:block" /> Your Digital Journey.
                     </h2>
@@ -1267,18 +1775,18 @@
                     transform your
                     digital presence? Reach out to us for a consultation. We reply within 24 hours.</p>
 
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4 justify-start p-4 md:p-0 rounded-xl md:rounded-none">
+                <div class="space-y-6 w-fit mx-auto md:mx-0">
+                    <div class="flex items-start gap-4 p-4 md:p-0">
                         <span class="material-symbols-outlined text-primary text-2xl">mail</span>
-                        <div>
+                        <div class="text-left">
                             <div class="text-xs uppercase font-bold tracking-widest text-slate-500 mb-1">Email</div>
                             <a href="mailto:business@technorapide.com"
                                 class="hover:text-primary transition-colors text-slate-900 dark:text-white font-medium">business@technorapide.com</a>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4 justify-start p-4 md:p-0 rounded-xl md:rounded-none">
+                    <div class="flex items-start gap-4 p-4 md:p-0">
                         <span class="material-symbols-outlined text-primary text-2xl">phone</span>
-                        <div>
+                        <div class="text-left">
                             <div class="text-xs uppercase font-bold tracking-widest text-slate-500 mb-1">Phone</div>
                             <div
                                 class="hover:text-primary transition-colors text-slate-900 dark:text-white font-medium">
@@ -1552,7 +2060,7 @@
                 <div>
                     <h5 class="font-bold text-lg mb-6">Connect With Us</h5>
                     <div class="grid grid-cols-3 gap-4">
-                        <a href="#"
+                        <a href="https://www.linkedin.com/company/technorapide/?viewAsMember=true"
                             class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-primary hover:text-white transition-colors group"
                             aria-label="LinkedIn">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -1560,7 +2068,7 @@
                                     d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://www.instagram.com/technorapideindia?igsh=MXBqZTBvMzcxcXZvNg=="
                             class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-pink-600 hover:border-pink-600 hover:text-white transition-colors group"
                             aria-label="Instagram">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -1568,7 +2076,7 @@
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://www.youtube.com/@technorapideindia"
                             class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-red-600 hover:border-red-600 hover:text-white transition-colors group"
                             aria-label="YouTube">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -1576,7 +2084,7 @@
                                     d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://www.facebook.com/share/18Ea3Cr97z/"
                             class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-colors group"
                             aria-label="Facebook">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -1584,7 +2092,7 @@
                                     d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://github.com/organizations/TechnoRapide/"
                             class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-slate-800 hover:border-slate-800 hover:text-white transition-colors group"
                             aria-label="GitHub">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -1592,7 +2100,7 @@
                                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://discord.gg/DYv2rS2u"
                             class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center hover:bg-indigo-500 hover:border-indigo-500 hover:text-white transition-colors group"
                             aria-label="Discord">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -1713,7 +2221,6 @@
                 if (prevBtn) {
                     prevBtn.disabled = currentTestimonialIndex === 0;
                     prevBtn.onclick = () => {
-                        window.scrollTo({ top: container.offsetTop - 150, behavior: 'smooth' });
                         currentTestimonialIndex--;
                         renderTestimonial();
                     };
@@ -1721,7 +2228,6 @@
                 if (nextBtn) {
                     nextBtn.disabled = currentTestimonialIndex >= allTestimonials.length - 1;
                     nextBtn.onclick = () => {
-                        window.scrollTo({ top: container.offsetTop - 150, behavior: 'smooth' });
                         currentTestimonialIndex++;
                         renderTestimonial();
                     };
