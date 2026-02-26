@@ -9,7 +9,7 @@ const SITE_CONFIG = {
             "/cloud-solution",
             "/n8n-automation",
             "/portfolio",
-            "/tech-stack",
+            "/our-designs",
             "/about",
             "/insights",
             "/blog-details",
@@ -21,7 +21,9 @@ const SITE_CONFIG = {
             "/sitemap.xml",
             "/robots.txt",
             "/style.css",
-            "/script.js"
+            "/script.js",
+            "/favicon_io",
+            "/favicon.ico"
         ],
         denied: [
             "/.vscode",

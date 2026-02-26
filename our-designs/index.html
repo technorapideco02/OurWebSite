@@ -6,13 +6,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon_io/favicon.ico">
     <link rel="manifest" href="/favicon_io/site.webmanifest">
-    <title>Tech Stack | TechnoRapide - Best Web Development Company In India, Barasat, Kolkata, West Bengal</title>
+    <title>Our Designs | TechnoRapide - Best Web Development Company In India, Barasat, Kolkata, West Bengal</title>
     <meta name="description"
         content="Explore the technology stack at TechnoRapide, the best web development company in India, Barasat, Kolkata, West Bengal. We use cutting-edge tools.">
     <meta name="keywords"
         content="tech stack, technologies, Best Web Development Company In India, Barasat, Kolkata, West Bengal, modern web tools">
-    <meta property="og:title" content="Tech Stack | TechnoRapide">
+    <meta property="og:title" content="Our Designs | TechnoRapide">
     <meta property="og:description"
         content="Explore the technology stack at TechnoRapide, the best web development company in India, Barasat, Kolkata, West Bengal.">
     <meta property="og:type" content="website">
@@ -85,6 +86,20 @@
             }
             .dark .bg-grid {
                 background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+            }
+            @keyframes fadeInUp {
+                from { opacity: 0; transform: translateY(40px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            @keyframes scaleUp {
+                from { opacity: 0; transform: scale(0.9); }
+                to { opacity: 1; transform: scale(1); }
+            }
+            .animate-fade-in-up {
+                animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            }
+            .animate-scale-up {
+                animation: scaleUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             }
         }
         body {
@@ -305,8 +320,8 @@
                 </div>
                 <a class="text-sm font-semibold hover:text-primary transition-colors" href="../portfolio/">Case
                     Studies</a>
-                <a class="text-sm font-semibold hover:text-primary transition-colors" href="../tech-stack/">Our Tech
-                    Stack</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="../our-designs/">Our
+                    Designs</a>
                 <div class="relative">
                     <button id="company-toggle" type="button"
                         class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors">
@@ -399,11 +414,11 @@
 
                 <div class="h-px bg-slate-100 dark:bg-slate-800"></div>
 
-                <!-- Case Studies & Tech Stack -->
+                <!-- Case Studies & Our Designs -->
                 <div class="flex flex-col gap-4">
                     <a href="../portfolio/" class="text-lg font-semibold text-slate-700 dark:text-slate-200">Case
                         Studies</a>
-                    <a href="../tech-stack/" class="text-lg font-semibold text-primary">Our Tech Stack</a>
+                    <a href="../our-designs/" class="text-lg font-semibold text-primary">Our Designs</a>
                 </div>
 
                 <div class="h-px bg-slate-100 dark:bg-slate-800"></div>
@@ -436,343 +451,198 @@
     </div>
 
 
-    <main class="pb-32 bg-slate-50 dark:bg-slate-900 bg-grid">
+    <main class="pb-32 bg-slate-50 dark:bg-slate-900 bg-grid min-h-screen">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 py-20">
             <div class="text-center mb-20">
-                <h1 class="text-4xl md:text-6xl font-runiga text-slate-900 dark:text-white mb-6">Our Tech Stack</h1>
-                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">We use the most modern and
-                    scalable technologies to build high-performance digital products.</p>
+                <h1 class="text-4xl md:text-6xl font-runiga text-slate-900 dark:text-white mb-6">Our Designs</h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Explore our portfolio of premium
+                    web and mobile designs, crafted with precision and innovation.</p>
             </div>
 
-            <div class="grid grid-cols-1 gap-20">
-                <section>
-                    <div class="flex items-center gap-4 mb-10">
-                        <div
-                            class="size-11 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center border border-primary/10 shadow-sm">
-                            <span class="material-symbols-outlined text-primary text-2xl">terminal</span>
-                        </div>
-                        <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">Frontend
-                            Development</h2>
-                    </div>
-                    <div class="glass-morphism rounded-[2.5rem] p-8 lg:p-12 shadow-sm">
-                        <div
-                            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 md:gap-6">
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                                    class="size-10" alt="TypeScript">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">TypeScript</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                                    class="size-10" alt="React">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">React.js</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-                                    class="size-10 dark:invert" alt="Next.js">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Next.js</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
-                                    class="size-10" alt="Vue.js">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Vue.js</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                                    class="size-10" alt="Tailwind">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Tailwind</span>
-                            </div>
-                            <div class="tech-card">
-                                <span class="material-symbols-outlined text-4xl text-purple-500">animation</span>
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Framer</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wasm/wasm-original.svg"
-                                    class="size-10" alt="Wasm">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Wasm</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg"
-                                    class="size-10" alt="Svelte">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Svelte</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+            <!-- Category Tabs -->
+            <div class="flex justify-center gap-6 mb-20">
+                <button onclick="setFilter('Website')" id="tab-website"
+                    class="tab-btn px-10 py-4 rounded-2xl font-bold transition-all duration-500 bg-primary text-white shadow-2xl shadow-primary/30 transform hover:-translate-y-1 active:scale-95"
+                    data-type="Website">
+                    Websites
+                </button>
+                <button onclick="setFilter('App')" id="tab-app"
+                    class="tab-btn px-10 py-4 rounded-2xl font-bold transition-all duration-500 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-primary/50 shadow-xl transform hover:-translate-y-1 active:scale-95"
+                    data-type="App">
+                    Mobile Apps
+                </button>
+            </div>
 
-                <section>
-                    <div class="flex items-center gap-4 mb-10">
-                        <div
-                            class="size-11 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center border border-primary/10 shadow-sm">
-                            <span class="material-symbols-outlined text-primary text-2xl">dns</span>
-                        </div>
-                        <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">Backend & Core
-                            Services</h2>
-                    </div>
-                    <div class="glass-morphism rounded-[2.5rem] p-8 lg:p-12 shadow-sm">
-                        <div
-                            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 md:gap-6">
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                                    class="size-10" alt="Node.js">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Node.js</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg"
-                                    class="size-10" alt="Golang">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Golang</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                                    class="size-10" alt="Python">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Python</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg"
-                                    class="size-10 dark:invert" alt="Rust">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Rust</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
-                                    class="size-10" alt="GraphQL">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">GraphQL</span>
-                            </div>
-                            <div class="tech-card">
-                                <span class="material-symbols-outlined text-4xl text-blue-500">hub</span>
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">gRPC</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elixir/elixir-original.svg"
-                                    class="size-10" alt="Elixir">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Elixir</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                                    class="size-10" alt="Java">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Java</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+            <!-- Project Count -->
+            <div class="mb-10 text-center md:text-left">
+                <p id="design-count"
+                    class="text-sm font-bold text-primary/60 uppercase tracking-[0.2em] animate-fade-in-up"></p>
+            </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <section>
-                        <div class="flex items-center gap-4 mb-10">
-                            <div
-                                class="size-11 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center border border-primary/10 shadow-sm">
-                                <span class="material-symbols-outlined text-primary text-2xl">cloud_done</span>
-                            </div>
-                            <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">Cloud &
-                                DevOps</h2>
-                        </div>
-                        <div class="glass-morphism rounded-[2.5rem] p-8 shadow-sm">
-                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6">
-                                <div class="tech-card">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-                                        class="size-10 dark:invert" alt="AWS">
-                                    <span
-                                        class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">AWS</span>
-                                </div>
-                                <div class="tech-card">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
-                                        class="size-10" alt="K8s">
-                                    <span
-                                        class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">K8s</span>
-                                </div>
-                                <div class="tech-card">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                                        class="size-10" alt="Docker">
-                                    <span
-                                        class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Docker</span>
-                                </div>
-                                <div class="tech-card">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
-                                        class="size-10" alt="Terraform">
-                                    <span
-                                        class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Terraform</span>
-                                </div>
-                                <div class="tech-card">
-                                    <span
-                                        class="material-symbols-outlined text-4xl text-slate-700 dark:text-slate-300">account_tree</span>
-                                    <span
-                                        class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">CI/CD</span>
-                                </div>
-                                <div class="tech-card">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"
-                                        class="size-10" alt="Grafana">
-                                    <span
-                                        class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Grafana</span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section>
-                        <div class="flex items-center gap-4 mb-10">
-                            <div
-                                class="size-11 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center border border-primary/10 shadow-sm">
-                                <span class="material-symbols-outlined text-primary text-2xl">database</span>
-                            </div>
-                            <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                                Persistence</h2>
-                        </div>
-                        <div class="glass-morphism rounded-[2.5rem] p-8 shadow-sm">
-                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6">
-                                <div class="tech-card">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                                        class="size-10" alt="Postgres">
-                                    <span
-                                        class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Postgres</span>
-                                </div>
-                                <div class="tech-card">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                                        class="size-10" alt="MongoDB">
-                                    <span
-                                        class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">MongoDB</span>
-                                </div>
-                                <div class="tech-card">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-                                        class="size-10" alt="Redis">
-                                    <span
-                                        class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Redis</span>
-                                </div>
-                                <div class="tech-card">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg"
-                                        class="size-10" alt="Elastic">
-                                    <span
-                                        class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Elastic</span>
-                                </div>
-                                <div class="tech-card">
-                                    <span
-                                        class="material-symbols-outlined text-4xl text-blue-900 dark:text-blue-400">reorder</span>
-                                    <span
-                                        class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">DynamoDB</span>
-                                </div>
-                                <div class="tech-card">
-                                    <span
-                                        class="material-symbols-outlined text-4xl text-slate-600 dark:text-slate-300">grid_view</span>
-                                    <span
-                                        class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Cassandra</span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+            <div id="designs-container" class="space-y-24 md:space-y-40">
+                <!-- Loading Skeleton -->
+                <div class="animate-pulse flex flex-col md:flex-row gap-12 items-center">
+                    <div class="w-full md:w-1/2 aspect-video bg-slate-200 dark:bg-slate-800 rounded-3xl"></div>
+                    <div class="w-full md:w-1/2 space-y-6">
+                        <div class="h-4 bg-slate-200 dark:bg-slate-800 rounded w-1/4"></div>
+                        <div class="h-12 bg-slate-200 dark:bg-slate-800 rounded w-3/4"></div>
+                        <div class="h-24 bg-slate-200 dark:bg-slate-800 rounded w-full"></div>
+                    </div>
                 </div>
-
-                <section>
-                    <div class="flex items-center gap-4 mb-10">
-                        <div
-                            class="size-11 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center border border-primary/10 shadow-sm">
-                            <span class="material-symbols-outlined text-primary text-2xl">smartphone</span>
-                        </div>
-                        <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">Mobile
-                            Ecosystem</h2>
-                    </div>
-                    <div class="glass-morphism rounded-[2.5rem] p-8 lg:p-12 shadow-sm">
-                        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"
-                                    class="size-10" alt="Swift">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Swift</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
-                                    class="size-10" alt="Kotlin">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Kotlin</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-                                    class="size-10" alt="Flutter">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Flutter</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                                    class="size-10" alt="React Native">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">React
-                                    Native</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
-                                    class="size-10 dark:invert" alt="Unity">
-                                <span
-                                    class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">Unity</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="mt-8">
-                    <div class="glass-morphism rounded-[3rem] p-10 lg:p-16 overflow-hidden relative shadow-sm">
-                        <div
-                            class="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[100px] rounded-full -mr-20 -mt-20">
-                        </div>
-                        <div class="relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                            <div>
-                                <h2 class="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-6">Innovation
-                                    Lab</h2>
-                                <h3
-                                    class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-8 tracking-tight">
-                                    Future-Proofing Your Business</h3>
-                                <p
-                                    class="text-base md:text-lg text-slate-500 dark:text-slate-400 mb-10 leading-relaxed">
-                                    Beyond our core tools, our R&amp;D team continuously explores emerging technologies
-                                    like AI, Web3, and specialized compute architectures.
-                                </p>
-                                <div class="grid sm:grid-cols-2 gap-6">
-                                    <div
-                                        class="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-white/20 dark:border-slate-700 shadow-sm">
-                                        <h4 class="font-bold text-slate-900 dark:text-white mb-2">AI Integration</h4>
-                                        <p class="text-sm text-slate-500 dark:text-slate-400">LLMs and computer vision
-                                            with PyTorch.</p>
-                                    </div>
-                                    <div
-                                        class="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-white/20 dark:border-slate-700 shadow-sm">
-                                        <h4 class="font-bold text-slate-900 dark:text-white mb-2">Web3 Architecture</h4>
-                                        <p class="text-sm text-slate-500 dark:text-slate-400">Smart contract and DeFi
-                                            infrastructure.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="aspect-video lg:aspect-[4/3] rounded-[2rem] overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 relative group shadow-2xl">
-                                <div class="absolute inset-0 bg-primary/5"></div>
-                                <div class="relative w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                    style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000')">
-                                </div>
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <div
-                                        class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md p-8 md:p-10 rounded-full shadow-2xl border border-white/50 dark:border-slate-700/50">
-                                        <span
-                                            class="material-symbols-outlined text-5xl md:text-6xl text-primary">biotech</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </div>
         </div>
     </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox"
+        class="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl hidden flex-col items-center justify-center p-4 md:p-10 cursor-zoom-out">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors p-2">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <img id="lightbox-img" class="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl animate-scale-up"
+            src="" alt="Enlarged design">
+        <p id="lightbox-caption" class="text-white text-xl font-bold mt-8 text-center"></p>
+    </div>
+
+    <script>
+        let allDesigns = [];
+        let currentFilter = 'Website';
+
+        function setFilter(type) {
+            currentFilter = type;
+
+            // Update Tab UI
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                if (btn.getAttribute('data-type') === type) {
+                    btn.classList.add('bg-primary', 'text-white', 'shadow-2xl', 'shadow-primary/30');
+                    btn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-700', 'shadow-xl');
+                } else {
+                    btn.classList.remove('bg-primary', 'text-white', 'shadow-2xl', 'shadow-primary/30');
+                    btn.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-700', 'shadow-xl');
+                }
+            });
+
+            renderDesigns();
+        }
+
+        async function fetchDesigns() {
+            try {
+                const response = await fetch('https://apifinal.technorapide.com/api/demos/all');
+                allDesigns = await response.json();
+
+                // Sort by createdAt descending
+                allDesigns.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+                renderDesigns();
+            } catch (error) {
+                console.error('Error fetching designs:', error);
+                document.getElementById('designs-container').innerHTML = '<p class="text-center py-20 text-slate-500">Failed to load designs. Please try again later.</p>';
+            }
+        }
+
+        function openLightbox(imgUrl, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightboxImg.src = imgUrl;
+            lightboxCaption.textContent = caption;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.tagName !== 'IMG') closeLightbox();
+        });
+
+        function renderDesigns() {
+            const container = document.getElementById('designs-container');
+            const countDisplay = document.getElementById('design-count');
+            container.innerHTML = '';
+
+            const filteredData = allDesigns.filter(item => {
+                const type = item.type.toLowerCase();
+                if (currentFilter === 'Website') return type.includes('web');
+                if (currentFilter === 'App') return type.includes('app') || type.includes('ios') || type.includes('android');
+                return true;
+            });
+
+            countDisplay.textContent = `${filteredData.length} ${currentFilter} Designs Found`;
+
+            if (filteredData.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-32 animate-fade-in-up">
+                        <span class="material-symbols-outlined text-8xl text-slate-200 dark:text-slate-800 mb-6 block">folder_open</span>
+                        <p class="text-slate-500 font-bold text-xl">No ${currentFilter.toLowerCase()} designs available right now.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filteredData.forEach((item, index) => {
+                const isEven = index % 2 === 0;
+                const isVideo = item.link.includes('youtube.com') || item.link.includes('youtu.be');
+                let mediaHtml = '';
+
+                if (isVideo) {
+                    const videoId = item.link.includes('v=') ? item.link.split('v=')[1].split('&')[0] : item.link.split('/').pop().split('?')[0];
+                    mediaHtml = `
+                        <div class="relative aspect-video rounded-[2rem] overflow-hidden group shadow-2xl ring-1 ring-slate-200/50 dark:ring-slate-700/50">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    `;
+                } else {
+                    mediaHtml = `
+                        <div onclick="openLightbox('${item.link}', '${item.name}')" class="relative aspect-video rounded-[2rem] overflow-hidden group shadow-2xl cursor-zoom-in ring-1 ring-slate-200/50 dark:ring-slate-700/50">
+                            <img src="${item.link}" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="${item.name}">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all transform scale-90 group-hover:scale-100">
+                                <span class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md p-5 rounded-full text-primary shadow-2xl">
+                                    <span class="material-symbols-outlined text-4xl">zoom_in</span>
+                                </span>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                container.innerHTML += `
+                    <div class="flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-12 md:gap-24 items-center animate-fade-in-up">
+                        <div class="w-full md:w-3/5">
+                            ${mediaHtml}
+                        </div>
+                        <div class="w-full md:w-2/5 flex flex-col gap-6 text-center md:text-left">
+                            <div class="flex items-center gap-3 justify-center md:justify-start">
+                                <span class="px-5 py-1.5 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.2em] rounded-full">${item.type}</span>
+                                <span class="text-slate-400 text-xs font-bold uppercase tracking-widest">${new Date(item.createdAt).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
+                            </div>
+                            <h3 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white leading-[1.1] tracking-tight">${item.name}</h3>
+                            <p class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed">A high-end visual showcase of our technical expertise and design excellence. This solution represents the pinnacle of modern user interface standards.</p>
+                            <div class="flex flex-wrap items-center gap-6 justify-center md:justify-start mt-4">
+                                <a href="../about/index.html#contact" class="px-8 py-3.5 bg-primary text-white font-bold rounded-2xl shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all">
+                                    Book Now
+                                </a>
+                                <div class="flex items-center gap-2 text-slate-400 font-bold text-xs uppercase tracking-tighter cursor-default">
+                                    <span class="material-symbols-outlined text-base">verified</span>
+                                    Premium Design
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchDesigns);
+    </script>
+
 
 
     <footer class="bg-background-light dark:bg-slate-950 pt-24 pb-12 border-t border-slate-200 dark:border-slate-800">
@@ -886,20 +756,20 @@
 
     <!-- Mobile Menu Logic -->
     <script>
-            (function () {
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                const mobileMenuClose = document.getElementById('mobile-menu-close');
-                const mobileMenu = document.getElementById('mobile-menu');
+        (function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-                if (mobileMenuButton && mobileMenuClose && mobileMenu) {
-                    mobileMenuButton.addEventListener('click', () => {
-                        mobileMenu.classList.remove('translate-x-full');
-                    });
-                    mobileMenuClose.addEventListener('click', () => {
-                        mobileMenu.classList.add('translate-x-full');
-                    });
-                }
-            })();
+            if (mobileMenuButton && mobileMenuClose && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.remove('translate-x-full');
+                });
+                mobileMenuClose.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                });
+            }
+        })();
     </script>
 
     <!-- Security Config & Service Worker -->

@@ -10,7 +10,7 @@ const SITE_CONFIG = {
             "/cloud-solution",
             "/n8n-automation",
             "/portfolio",
-            "/tech-stack",
+            "/our-designs",
             "/about",
             "/insights",
             "/blog-details",
@@ -22,7 +22,9 @@ const SITE_CONFIG = {
             "/sitemap.xml",
             "/robots.txt",
             "/style.css",
-            "/script.js"
+            "/script.js",
+            "/favicon_io",
+            "/favicon.ico"
         ],
         denied: [
             "/.vscode",
@@ -57,11 +59,14 @@ self.addEventListener("fetch", e => {
 
     // Check allowed paths for navigation requests
     if (e.request.mode === "navigate") {
+        const scopePath = new URL(self.registration.scope).pathname;
+        const relativePath = path.startsWith(scopePath) ? path.substring(scopePath.length - 1) : path;
+
         const isAllowed = SITE_CONFIG.acl.allowed.some(allowedPath => {
             if (allowedPath === "/") {
-                return path === "/" || path === "/index.html";
+                return relativePath === "/" || relativePath === "/index.html";
             }
-            return path.startsWith(allowedPath);
+            return relativePath.startsWith(allowedPath);
         });
 
         if (!isAllowed) {
